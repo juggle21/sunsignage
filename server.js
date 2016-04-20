@@ -35,8 +35,8 @@
 
 	mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
 
-    	app.use('/js', express.static(__dirname + '/js'));
-   	 app.use('/bower_components', express.static(__dirname + '/bower_components'));
+    app.use('/js', express.static(__dirname + '/js'));
+   	app.use('/bower_components', express.static(__dirname + '/bower_components'));
 	app.use(morgan('dev')); 										// log every request to the console
 	app.use(bodyParser.urlencoded({'extended':'true'})); 			// parse application/x-www-form-urlencoded
 	app.use(bodyParser.json()); 									// parse application/json
@@ -52,7 +52,7 @@
 	// routes ======================================================================
 
 	// api ---------------------------------------------------------------------
-	// get all todos
+	/* get all todos
 	app.get('/api/todos', function(req, res) {
 
 		// use mongoose to get all todos in the database
@@ -116,12 +116,13 @@
 			});
 		});
 	});
-
+	*/
+	
 	// application -------------------------------------------------------------
 	app.get('/', function(req, res) {
 		res.sendfile('index.html'); // load the single view file (angular will handle the page changes on the front-end)
 	});
 
 	// listen (start app with node server.js) ======================================
-	app.listen(8080, argv.fe_ip);
-	console.log("App listening on port 8080");
+	app.listen(80, argv.fe_ip);
+	console.log("App listening on port 80");
