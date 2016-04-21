@@ -35,13 +35,8 @@
 
 	mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
 
-<<<<<<< HEAD
-    app.use('/js', express.static(__dirname + '/js'));
-   	app.use('/bower_components', express.static(__dirname + '/bower_components'));
-=======
     //app.use('/js', express.static(__dirname + '/js'));
    	//app.use('/bower_components', express.static(__dirname + '/bower_components'));
->>>>>>> 5128a6eb99d70778396bda7f04791df9e3823b05
 	app.use(morgan('dev')); 										// log every request to the console
 	app.use(bodyParser.urlencoded({'extended':'true'})); 			// parse application/x-www-form-urlencoded
 	app.use(bodyParser.json()); 									// parse application/json
@@ -129,5 +124,5 @@
 	});
 
 	// listen (start app with node server.js) ======================================
-	app.listen(80, argv.fe_ip);
-	console.log("App listening on port 80");
+	app.listen(8080, argv.fe_ip);
+	console.log("App listening on port 8080");
