@@ -1,0 +1,120 @@
+<div id="appLauncherContainer">
+  <div class="page-content apps-launcher">
+    <div class="apps-launcher-tour">
+      <div class="container">
+      <div class="headline add-bottom">
+        <h2 id="welcome-text" class="remove-bottom half-top">Sun Signage에 오신 것을 환영합니다!</h2>
+        <span class"text-muted">단 세번의 과정으로 고객님의 디지털 사이니지를 완성 할 수 있습니다.</span>
+      </div><!--headline-->
+      <div class="row">
+        <div class="col-sm-4"> 
+          <div class="content-box half-bottom">
+            <div class="image">
+              <img src="https://s3.amazonaws.com/Rise-Images/Experimental/create.png" class="img-responsive">
+            </div><!--image-->
+            <div class="padding-large-horizontal padding-small-vertical">  
+              <p class="text-muted add-left add-right">1. 스크린을 만듭니다.</p>
+              <button id="presentationAddButton" class="btn btn-hg btn-primary add-bottom btn-block" ng-click="editorFactory.addPresentationModal()">스크린 생성</button>
+            </div>
+          </div><!--content-box-->
+        </div><!--col-->
+        <div class="col-sm-4">
+          <div class="content-box half-bottom">
+            <div class="image">
+              <img src="https://s3.amazonaws.com/Rise-Images/Experimental/show.png" class="img-responsive">
+            </div><!--image-->
+            <div class="padding-large-horizontal padding-small-vertical">  
+              <p class="text-muted add-left add-right">2. 디스플레이를 등록합니다.</p>
+              <a ui-sref="apps.displays.add" class="btn btn-hg btn-primary add-bottom btn-block" ng-click="launcherTracker('Add Display')">디스플레이 등록</a>
+            </div>
+          </div><!--content-box-->
+        </div>
+        <div class="col-sm-4">
+          <div class="content-box half-bottom">
+            <div class="image">
+              <img src="https://s3.amazonaws.com/Rise-Images/Experimental/organize.png" class="img-responsive">
+            </div><!--image-->
+            <div class="padding-large-horizontal padding-small-vertical">  
+              <p class="text-muted add-left add-right">3. 스케줄을 만듭니다. </p>
+              <a ui-sref="apps.schedules.add" class="btn btn-hg btn-primary add-bottom btn-block">스케줄 생성</a>
+            </div>
+          </div><!--content-box-->
+        </div>           
+      </div><!--row-->
+      </div>
+    </div>
+  </div>
+
+  <div class="website">
+    <div class="page-content">
+    <div class="home-features">
+      <div class="container" vertilize-container>
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="http://rva.risevision.com/#PRESENTATIONS" class="feature" vertilize>
+              <div class="content-box-body">
+                <div class="image"><img src="images/editor-image.png"></div>
+                <h3>편집기</h3>
+                <p>고객님을 위한 디지털 사이니지 컨텐츠를 만들고 관리합니다.</p>
+              </div>
+            </a>
+          </div><!--col-->
+
+          <div class="col-sm-4">
+            <a href="http://rva.risevision.com/#DISPLAYS" class="feature" vertilize>
+              <div class="content-box-body">
+                <div class="image"><img src="images/displays-image.png"></div>
+                <h3>디스플레이</h3>
+                <p>고객님의 디지털 사이니지 디스플레이를 모니터링 및 관리합니다.</p>
+              </div>
+            </a>
+          </div><!--col-->
+
+          <div class="col-sm-4">
+            <a href="http://rva.risevision.com/#SCHEDULES" class="feature" vertilize>
+              <div class="content-box-body">
+                <div class="image"><img src="images/schedule-image.png"></div>
+                <h3>스케줄</h3>
+                <p>컨텐츠를 전송및 재생을 위한 스케줄을 관리합니다.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- FIX TO : 나중에 서비스 개발후 확장 --
+          <div class="row">
+            <div class="col-sm-4">
+              <a href="http://store.risevision.com" class="feature" vertilize>
+                <div class="content-box-body">
+                  <div class="image"><img src="images/store-image.png"></div>
+                  <h3>Store</h3>
+                  <p>A digital signage store full of content, services, applications and hardware for Rise Vision.</p>
+                </div>
+              </a>
+            </div><!--col--
+
+            <div class="col-sm-4">
+              <a href="http://storage.risevision.com" class="feature" vertilize>
+                <div class="content-box-body">
+                  <div class="image"><img src="images/storage-image.png"></div>
+                  <h3>Storage</h3>
+                  <p>Manage and deliver media to your digital signage displays.</p>
+                </div>
+              </a>
+            </div><!--col--
+            </div><!--row--
+
+            <div class="col-sm-4">
+            <a href="https://community.risevision.com" class="feature" vertilize>
+              <div class="content-box-body">
+                <div class="image"><img src="images/community-image.png"></div>
+                <h3>Community</h3>
+                <p>Ask questions, share ideas and connect with other people who are passionate about digital signage.</p>
+              </div>
+            </a>
+            </div>
+          </div><!--row-->
+        </div>
+      </div><!--home-features-->
+    </div><!--page-content-->
+  </div><!--website-->
+</div><!--appLauncherContainer-->

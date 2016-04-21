@@ -1,0 +1,42 @@
+<div>
+  <a class="btn btn-primary btn-block" id="addContentButton" ng-click="playlistItemFactory.addContent()">
+    {{'editor-app.playlistItem.add' | translate}} <i class="fa fa-plus icon-right"></i>
+  </a>
+</div>
+
+<div class="editor-playlist scrollable-list">
+  <div class="editor-playlist-item" ng-repeat="item in factory.getItems() track by $index">
+
+    <div class="arrows">
+      <button class="btn btn-block btn-xs btn-default" id="moveUpButton" ng-click="factory.movePlaylistItemUp(item)" ng-disabled="!factory.canPlaylistItemMoveUp(item)"><i class="fa fa-arrow-up"></i></button>
+      <button class="btn btn-block btn-xs btn-default" id="moveDownButton" ng-click="factory.movePlaylistItemDown(item)" ng-disabled="!factory.canPlaylistItemMoveDown(item)"><i class="fa fa-arrow-down"></i></button>
+    </div><!--arrows-->
+
+    <div class="actions">
+
+      <button class="btn btn-xs btn-default editPlaylistItem" ng-click="playlistItemFactory.edit(item)"><i class="fa fa-pencil"></i></button>
+      <button class="btn btn-xs btn-default" id="duplicateButton" ng-click="factory.duplicateItem(item)"><i class="fa fa-copy"></i></button>
+      <button class="btn btn-xs btn-default" id="removeButton" ng-click="remove(item)"><i class="fa fa-trash-o"></i></button>
+    </div>
+
+    <div>
+      <div class="nameContainer" ng-show="item.type === 'widget' && (item.objectReference || item.settingsUrl)">
+        <a href="#" ng-click="widgetModalFactory.showWidgetModal(item)">
+          <p class="playlist-item-name"><span>{{item.name}}</span> <i class="fa fa-cog"></i></p>
+        </a>
+      </div>
+      <div  class="nameContainer" ng-hide="item.type === 'widget' && (item.objectReference || item.settingsUrl)" >
+        <p class="playlist-item-name">{{item.name}}</p>
+      </div>
+      
+      
+      <p class="text-small text-muted remove-bottom {{item.subscriptionStatus|subscriptionStatusClass}}">
+      <span class="playlist-item-status">{{item.statusMessage}}</span>
+      </p>
+    </div>
+
+    <div ng-hide="factory.getItems().length">
+      <p class="text-center text-muted" translate>editor-app.playlistItem.no-playlistItem</p>
+    </div>
+  </div><!--playlist-->
+</div><!--editor-playlist-->

@@ -1,0 +1,46 @@
+<div class="app-header">
+  <div class="title-block">
+    <!-- App Title -->
+    <h1 translate>displays-app.title</h1>
+  </div>
+
+  <div class="global-actions" require-role="da">
+    <button ng-click="addDisplay()" class="btn btn-lg btn-primary">     
+      {{ 'displays-app.actions.new' | translate }}
+      <i class="fa fa-plus icon-right"></i> 
+    </button>
+  </div>
+</div>
+
+<div id="display-loader" rv-spinner rv-spinner-key="display-loader" rv-spinner-start-active="0"></div>
+
+<div>
+  <form role="form" name="displayDetails">
+    
+    <display-fields></display-fields>
+
+    <div ng-show="submitError" class="alert alert-danger" role="alert">
+      <strong translate>displays-app.details.error </strong>{{submitError}}
+    </div> 
+    
+    <div class="button-row text-right">
+      <p class="visible-xs"><last-modified change-date="display.changeDate" changed-by="display.changedBy"></last-modified></p>
+      <!-- Indicates delete or destructive action -->
+      <button id="deleteButton" type="button" class="btn btn-danger pull-left" ng-click="confirmDelete()" require-role="da">
+        {{'common.delete' | translate}}
+        <i class="fa fa-white fa-trash-o icon-right"></i>
+      </button>
+      <span class="hidden-xs add-right"><last-modified change-date="display.changeDate" changed-by="display.changedBy"></last-modified></span>
+      <!-- Indicates a successful or positive action -->
+      <button type="submit" class="btn btn-primary" ng-click="save()" ng-disabled="displayDetails.$invalid || savingDisplay" require-role="da">
+        {{ savingDisplay ? ('common.saving' | translate) : ('common.save' | translate)}} 
+        <i class="fa fa-check icon-right"></i>
+      </button>
+      <!-- Indicates cancel or non-destructive action -->
+      <button ui-sref="apps.displays.list" class="btn btn-default">
+        {{'common.cancel' | translate}}
+        <i class="fa fa-times icon-right"></i>
+      </button>
+    </div>
+  </form><!-- ticketDetails -->
+</div><!--container-->

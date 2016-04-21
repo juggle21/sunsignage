@@ -1,0 +1,29 @@
+<div class="container storage-full" ng-controller="FilesListController">
+	<div class="app-header" ng-show="!trialAvailable">		
+		<div class="title-block">
+			<h1 id="title" translate>storage-client.header</h1>
+		</div>
+
+		<ng-include src="'partials/storage/global-actions.html'"></ng-include>
+
+		<div style="clear: both;"></div>
+		<div ng-controller="SubscriptionStatusController">
+			<div id="subscription-status" subscription-status
+			product-id="{{productId}}" product-code="{{productCode}}" company-id="{{companyId}}"
+			ng-model="subscriptionStatus.result" show-store-modal="showStoreModal" expanded-format="true"></div>
+		</div>
+
+
+		<ng-include src="'partials/storage/upload-panel.html'"></ng-include>
+
+	</div>  <!--app-header-->
+
+	<search-filter filter-config="filterConfig" search="search" do-search="search.doSearch" ng-show="!trialAvailable"></search-filter>
+
+	<ng-include src="'partials/storage/files-list.html'"></ng-include>
+
+	<div ng-show="trialAvailable">
+		<ng-include src="'partials/storage/start-trial.html'" ng-show="trialAvailable"></ng-include>
+	</div>
+
+</div><!--padding-->

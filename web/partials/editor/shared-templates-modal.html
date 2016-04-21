@@ -1,0 +1,37 @@
+<div id="sharedTemplatesModal">
+<div class="modal-header">
+  <button id="dismissButton" type="button" class="close" ng-click="dismiss()">
+    <i class="fa fa-times"></i>
+  </button>
+  <h3 id="sharedTemplatesModalTitle" class="modal-title" translate>editor-app.sharedTemplates.title</h3>
+</div>
+<div class="modal-body">
+  <search-filter filter-config="filterConfig" search="search" do-search="factory.doSearch"></search-filter>
+
+  <div class="content-box half-top">
+    <div class="scrollable-list" 
+      scrolling-list="factory.load()"
+      rv-spinner rv-spinner-key="template-list-loader"
+      rv-spinner-start-active="1"
+      >
+      <table class="table-2 table-hover" id="templatesTable">
+        <thead>
+          <tr class="clickable" ng-click="factory.sortBy('name')">
+            <th id="tableHeaderName">
+              {{'editor-app.sharedTemplates.name' | translate}}
+              <i ng-if="search.sortBy == 'name'" class="fa" ng-class="{false: 'fa-long-arrow-up', true: 'fa-long-arrow-down'}[search.reverse]"></i>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="text-clickable-row" data-ng-class="{'active' : toggleObject.item == $index}" ng-repeat="template in factory.items.list">
+            <td id="templateName"><a href="" ng-click="toggleObject.item = $index; select(template.id)">{{template.name}}</a></td>
+            <td class="text-right"><a id="templatePreview" href="" ng-click="editorFactory.preview(template.id); $event.stopPropagation()" translate>editor-app.sharedTemplates.preview</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

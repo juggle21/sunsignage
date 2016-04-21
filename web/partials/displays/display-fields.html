@@ -1,0 +1,233 @@
+<div class="form-group" ng-class="{'has-error': !displayDetails.name.$pristine && displayDetails.name.$invalid}" show-errors>
+  <label class="control-label">{{'displays-app.fields.name.name' | translate}} *</label>
+  <div ng-class="{'input-group custom-addon': display.lastActivityDate}">
+    <input type="text" class="form-control" placeholder="Display Name" id="name" name="name" ng-model="display.name" required focus-me="!displayId">
+    <span class="input-group-addon" ng-show="display.lastActivityDate">
+      <div class="form-control-static nowrap" ng-if="displayId">
+        <i class="fa {{display | status}} fa-circle icon-left"></i>
+        {{display.lastActivityDate | date:'d-MMM-yyyy h:mm a'}}
+      </div>
+    </span>
+  </div>
+  <p class="text-danger" ng-show="!displayDetails.name.$pristine && displayDetails.name.$error.required" translate>
+    displays-app.fields.name.required
+  </p>
+</div>
+
+<!--      INSTALL PLAYER      -->
+<div ng-show="displayId && !display.lastActivityDate">
+  <hr />
+
+  <div class="panel panel-success display-panel"> 
+    <div class="panel-heading"> 
+      <h3 class="panel-title" translate>displays-app.fields.player.install.id</h3>
+    </div>
+    
+    <div class="panel-body">{{displayId}}</div> 
+  </div>
+
+  <br />
+
+  <h4 translate>displays-app.fields.player.install.heading</h4>
+
+  <div>
+    <p class="add-right" translate translate-values="{displayId: displayId}">displays-app.fields.player.playerWarning</p>
+  </div>
+
+  <!-- DOWNLOAD PLAYER BUTTONS -->
+  <div id="downloadPlayerNew" class="download-buttons hidden-xs">
+    <download-player></download-player>
+  </div>
+
+</div>
+
+<div class="form-group" ng-show="display.lastActivityDate" ng-controller="displayControls">
+  <hr />
+
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.id</label>
+    <a target="_blank" class="btn btn-link pull-right" href="https://help.risevision.com/user/create-a-display">
+      <i class="fa fa-question-circle icon-left"></i>    
+      {{ 'displays-app.fields.controls.howto' | translate }}
+    </a>
+    <div class="form-control-static">{{display.id}}</div>
+  </div>
+  
+  <!--      BUTTONS       -->
+  <div class="add-bottom hidden-xs">
+    <button type="button" class="btn btn-default" ng-disabled="!display.playerVersion" ng-click="confirm(displayId, display.name, 'restart')" require-role="da">
+      <i class="fa fa-refresh"></i> 
+      {{ 'displays-app.fields.controls.restart.name' | translate }}
+    </button>
+    <button type="button" class="btn btn-default" ng-disabled="!display.playerVersion || !canReboot(display)" ng-click="confirm(displayId, display.name, 'reboot')" require-role="da">
+      <i class="fa fa-power-off"></i> 
+      {{ 'displays-app.fields.controls.reboot.name' | translate }}
+    </button>
+     <button type="button" class="btn btn-default" ng-click="showDownloadButtons = true">
+      <i class="fa fa-cloud-download"></i>
+      {{ 'displays-app.fields.controls.download' | translate }}
+    </button>
+  </div>
+
+  <!-- DOWNLOAD PLAYER BUTTONS -->
+  <div id="downloadPlayerExisting" class="download-buttons add-bottom hidden-xs animated fadeIn" ng-show="showDownloadButtons">
+    <download-player></download-player>
+  </div>
+
+  <div class="add-bottom visible-xs">    
+    <button type="button" class="btn btn-default btn-block half-bottom" ng-disabled="!display.playerVersion" ng-click="confirm(displayId, display.name, 'restart')">
+      <i class="fa fa-refresh"></i> 
+      {{ 'displays-app.fields.controls.restart.name' | translate }}
+    </button>
+    <button type="button" class="btn btn-default btn-block half-bottom" ng-disabled="!display.playerVersion || !canReboot(display)" ng-click="confirm(displayId, display.name, 'reboot')">
+      <i class="fa fa-power-off"></i> 
+      {{ 'displays-app.fields.controls.reboot.name' | translate }}
+    </button>
+  </div>
+  <div ng-show="controlsError" class="alert alert-danger" role="alert">
+    <strong translate>displays-app.fields.controls.error </strong>{{controlsError}}
+  </div> 
+  <div class="panel panel-info animated fadeIn" ng-show="controlsInfo">
+    <div class="panel-body">
+      <strong>{{ controlsInfo | translate }}</strong>
+    </div>
+  </div> 
+
+  <!--      STATS       -->
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.resolution</label>
+    <div class="form-control-static">{{display.width | resolution: display.height}}</div>
+  </div>
+  
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.ipAddress</label>
+    <div class="form-control-static">{{display.playerLocalIpAddress}}</div>
+  </div>
+  
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.operatingSystem</label>
+    <div class="form-control-static">{{display.os}}</div>
+  </div>
+  
+  <div class="form-group form-inline" ng-show="isChromeOs(display)">
+    <label class="control-label" translate>displays-app.fields.player.orientation.name</label>
+    <select class="form-control" ng-model="display.orientation" integer-parser>
+      <option value="0" translate>displays-app.fields.player.orientation.0</option>
+      <option value="90" translate>displays-app.fields.player.orientation.90</option>
+      <option value="180" translate>displays-app.fields.player.orientation.180</option>
+      <option value="270" translate>displays-app.fields.player.orientation.270</option>
+    </select>
+  </div>
+  
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.playerVersion</label>
+    <div class="form-control-static">{{(display.playerName ? display.playerName + " " : "") + (display.playerVersion ? display.playerVersion : "")}}</div>
+  </div>
+  
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.viewerVersion</label>
+    <div class="form-control-static">{{display.viewerVersion}}</div>
+  </div>
+  
+  <div class="form-group form-inline" ng-show="showBrowserUpgradeMode">
+    <label class="control-label" translate>displays-app.fields.player.browser.upgrade.name</label>
+    <select class="form-control" ng-model="display.browserUpgradeMode" integer-parser ng-disabled="!display.playerName && !display.playerVersion">
+      <option value="0" translate>displays-app.fields.player.browser.upgrade.autoUpgrade</option>
+      <option value="1" translate>displays-app.fields.player.browser.upgrade.userManaged</option>
+    </select>
+  </div>
+  
+  <div class="form-group form-inline" ng-show="display.browserUpgradeMode !== 0">
+    <label class="control-label" translate>displays-app.fields.player.browser.recommended</label>
+    <div class="form-control-static">{{display.recommendedBrowserVersion}}</div>
+  </div>
+  
+  <div class="form-group form-inline">
+    <label class="control-label" translate>displays-app.fields.player.browser.installed</label>
+    <div class="form-control-static">{{(display.browserName ? display.browserName + " " : "") + (display.browserVersion ? display.browserVersion : "")}}</div>
+  </div>      
+</div>  
+
+<!--      SETTINGS       -->
+<hr ng-show="displayId" />
+
+<div class="form-group">
+  <div class="checkbox">
+    <label class="control-label">
+      <input type="checkbox" ng-model="display.useCompanyAddress"> <strong translate>displays-app.fields.address.useCompany</strong>
+    </label>
+  </div>
+</div>
+
+<div ng-hide="display.useCompanyAddress" class="add-top add-bottom">
+  <div class="form-group">
+    <label class="control-label" translate>displays-app.fields.address.description</label>
+    <input type="text" class="form-control" ng-model="display.addressDescription">
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.street</label>
+        <input type="text" class="form-control" ng-model="display.street">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.unit</label>
+        <input type="text" class="form-control" ng-model="display.unit">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.city</label>
+        <input type="text" class="form-control" ng-model="display.city">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.country.name</label>
+        <select class="form-control" ng-model="display.country" ng-options="c.code as c.name for c in countries" empty-select-parser>
+          <option value="" ng-show="false" translate>displays-app.fields.address.country.placeholder</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.province.name</label>
+        <input type="text" class="form-control" ng-model="display.province" ng-hide="display.country == 'US' || display.country == 'CA'" />
+        <select class="form-control selectpicker" ng-model="display.province" ng-options="c[1] as c[0] for c in regionsCA" ng-show="display.country == 'CA'" empty-select-parser>
+          <option value="" ng-show="false" translate>displays-app.fields.address.province.provincePlaceholder</option>
+        </select>
+        <select class="form-control selectpicker" ng-model="display.province" ng-options="c[1] as c[0] for c in regionsUS" ng-show="display.country == 'US'" empty-select-parser>
+          <option value="" ng-show="false" translate>displays-app.fields.address.province.statePlaceholder</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" translate>displays-app.fields.address.postalCode</label>
+        <input type="text" class="form-control" ng-model="display.postalCode">
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label" translate>displays-app.fields.address.timezone.name</label>
+    <select class="form-control" ng-model="display.timeZoneOffset" integer-parser>
+      <option value="" ng-show="false" translate>displays-app.fields.address.timezone.placeholder</option>
+      <option value="{{c[1]}}" ng-repeat="c in timezones">{{c[0]}}</option>
+    </select>
+  </div>
+  <hr>
+</div><!--display address-->
+
+<div class="form-group reboot-time">
+  <div class="checkbox">
+    <label class="control-label"><input type="checkbox" ng-model="display.restartEnabled"> <strong translate>displays-app.fields.reboot</strong></label> 
+  </div>
+  <time-picker ng-model="display.restartTime" ng-disabled="!display.restartEnabled"></time-picker> 
+</div>

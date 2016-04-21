@@ -1,0 +1,9 @@
+.idea/
+/*.iml
+node_modules
+web/bower_components
+reports
+.log
+dist
+web/tmp
+web/scripts/config/config.js

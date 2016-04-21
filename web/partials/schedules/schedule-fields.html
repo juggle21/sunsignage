@@ -1,0 +1,55 @@
+<div class="form-group" ng-class="{'has-error': !scheduleDetails.name.$pristine && scheduleDetails.name.$invalid}" show-errors>
+  <label class="control-label">{{'schedules-app.fields.name.name' | translate}} *</label>
+  <input type="text" class="form-control" placeholder="{{'schedules-app.fields.name.placeholder' | translate}}" id="name" name="name" ng-model="schedule.name" required focus-me="!scheduleId">
+  <p class="text-danger" ng-show="!scheduleDetails.name.$pristine && scheduleDetails.name.$error.required" translate>
+    schedules-app.fields.name.required
+  </p>
+</div>
+
+<div class="form-group">
+  <label class="control-label" translate>schedules-app.fields.timeline</label>
+  <timeline-textbox
+  use-localdate = "true"
+  time-defined = "schedule.timeDefined"
+  start-date = "schedule.startDate"
+  end-date = "schedule.endDate"
+  start-time = "schedule.startTime"
+  end-time = "schedule.endTime"
+  recurrence-type = "schedule.recurrenceType"
+  recurrence-frequency = "schedule.recurrenceFrequency"
+  recurrence-absolute = "schedule.recurrenceAbsolute"
+  recurrence-day-of-week = "schedule.recurrenceDayOfWeek"
+  recurrence-day-of-month = "schedule.recurrenceDayOfMonth"
+  recurrence-week-of-month = "schedule.recurrenceWeekOfMonth"
+  recurrence-month-of-year = "schedule.recurrenceMonthOfYear"
+  recurrence-days-of-week = "schedule.recurrenceDaysOfWeek"
+  ></timeline-textbox>
+</div><!--form-group-->
+
+<distribution-selector distribution="schedule.distribution" distribute-to-all="schedule.distributeToAll"></distribution-selector>
+
+<div class="add-top text-right">
+  <div class="pull-left">
+    <h3 class="remove-top" style="line-height:33px;" translate>schedules-app.playlist.title</h3>
+  </div>
+  <div class="btn-group" dropdown>
+    <button id="addPlaylistItemButton" dropdown-toggle class="dropdown-toggle btn btn-primary">{{'schedules-app.playlist.add-playlist-item' | translate}} <i class="fa fa-plus icon-right"></i></button>
+    <div class="dropdown-menu playlist-menu" role="menu">
+      <ul>
+      <li>
+        <a class="clickable" id="addPresentationItemButton" ng-click="addPresentationItem()">
+          <span translate>schedules-app.playlist.item.presentation</span>
+        </a>
+      </li>
+      <li>
+        <a class="clickable" id="addUrlItemButton" ng-click="addUrlItem()">
+          <span translate>schedules-app.playlist.item.url</span>
+        </a>
+      </li>
+      </ul>
+    </div>
+  </div>
+  <a class="btn btn-default" id="previewButton" target="_blank" ng-href="{{previewUrl}}" ng-show="previewUrl">{{'schedules-app.actions.preview' | translate}} <i class="fa fa-play icon-right"></i></a>
+</div>
+
+<playlist playlist-items="schedule.content"></playlist>

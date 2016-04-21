@@ -1,0 +1,60 @@
+<div id="addStoreProductModal">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="dismiss()" aria-hidden="true">
+      <i class="fa fa-times"></i>
+    </button>
+    <h3 id="storeModalTitle" class="modal-title">{{ 'editor-app.storeProduct.' + (factory.search.category === 'Content' ? 'content' : 'templates') + '.title' | translate }}</h3>
+  </div>
+  <div class="modal-body padding-large" stop-event="touchend">
+    
+    <search-filter filter-config="filterConfig" search="search" do-search="factory.doSearch"></search-filter>
+
+    <div class="templates">
+
+      <div class="template-filters half-bottom">
+        <ul class="list-unstyled" ng-if="factory.search.category === 'Templates'">
+          <li ng-repeat="tag in productTags" ng-class="{ active : search.productTag === tag || !search.productTag && tag === 'all' }" ng-click="selectProductTag(tag)"><span>{{tag}}</span></li>
+        </ul>
+      </div><!--template-filters-->
+
+
+      <ul id="productList" class="template-grid" 
+          scrolling-list="factory.load()"
+          rv-spinner rv-spinner-key="product-list-loader"
+          rv-spinner-start-active="1">
+
+      <li class="blank-template" ng-if="factory.search.category == 'Templates' && !factory.loadingItems">
+        <a class="clickable" id="newPresentationButton" ui-sref="apps.editor.workspace.artboard" ng-click="dismiss();">
+          <p><span><i class="fa fa-plus fa-2x"></i></span> {{'editor-app.storeProduct.templates.blank' | translate}}</p>
+        </a>
+      </li>
+     
+      <ng-repeat ng-repeat="product in factory.items.list">
+      <li class="storeProduct" ng-click="select(product)">
+        <a href="">
+          <img ng-src="{{product.imageUrl}}" class="img-responsive">        
+          <div class="template-info">
+            <a class="btn btn-default btn-sm pull-right" ng-href="{{storeUrl}}/product/{{product.productId}}/" target="_blank" ng-click="$event.stopPropagation()"><i class="fa fa-info"></i></a>
+            <h3 id="productName">{{product.name}}</h3>
+            <p id="status">{{product.paymentTerms.toLowerCase() === 'free'? 'Free' : 'Premium'}} {{product.trialPeriod > 0 ? ' - '+product.trialPeriod+' Days Trial' : ''}}</p>
+          </div>
+        </a>
+      </li>
+      </ng-repeat>
+
+      <li class="suggest-template" ng-if="factory.search.category == 'Templates' && !factory.loadingItems">
+        <a href="https://docs.google.com/forms/d/1slHKxGxywkiSakMukDr4dMGLmhzhYhoU0F2BHP8FSd4/viewform" target="_blank">
+          <h3 translate>editor-app.storeProduct.templates.cantFind</h3>
+          <p translate>editor-app.storeProduct.templates.suggest</p>
+        </a>
+      </li>
+      </ul>
+
+    </div>
+
+    <a id="addWidgetByUrl" class="btn btn-default" href="#" ng-click="addWidgetByUrl()" ng-if="factory.search.category == 'Content'">
+            {{'editor-app.addWidget.title' | translate}} <i class="fa fa-code icon-right"></i>
+        </a>
+    
+  </div>
+</div>

@@ -35,8 +35,7 @@
 
 	mongoose.connect('mongodb://104.199.153.122:80/my_database');
 
-    //app.use('/js', express.static(__dirname + '/js'));
-   	//app.use('/bower_components', express.static(__dirname + '/bower_components'));
+   	app.use(express.static(__dirname + '/dist'));
 	app.use(morgan('dev')); 										// log every request to the console
 	app.use(bodyParser.urlencoded({'extended':'true'})); 			// parse application/x-www-form-urlencoded
 	app.use(bodyParser.json()); 									// parse application/json

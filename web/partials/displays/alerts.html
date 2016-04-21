@@ -1,0 +1,180 @@
+<div class="container">
+	<div class="app-header">
+		<div class="title-block">
+			<!-- App Title -->
+			<h1 id="title" translate>displays-app.alerts.title</h1>
+		</div>
+
+		<div class="global-actions">
+			<span class="add-right text-muted" ng-if="!termsAccepted" translate>displays-app.alerts.acceptTerms</span>
+			<button id="alertsToggleButton" ng-click="alertsOn = !alertsOn" class="btn btn-lg" ng-class="{'btn-primary' : alertsOn, 'btn-default' : !alertsOn, 'disabled' : !termsAccepted, 'animated bounceIn' : termsAccepted}">
+			<span ng-if="alertsOn" translate>displays-app.alerts.turnOff</span>
+			<span ng-if="!alertsOn" translate>displays-app.alerts.turnOn</span>
+			</button>
+
+		</div>
+	</div>
+
+	<div class="content-box">
+		<div class="content-box-body bg-warning">
+			<div class="form-group remove-bottom">
+				<input id="termsAcceptedCheckbox" type="checkbox" ng-model="termsAccepted" ng-checked="termsAccepted" class="pull-left add-right"><label id="iAcceptLabel" class="control-label" translate>displays-app.alerts.iAccept</label>
+			</div>
+			<a id="toggleShowTerms" href="#" ng-click="$parent.showTerms = !$parent.showTerms" translate>displays-app.alerts.viewTerms</a>
+			<p id="termsText" ng-show="showTerms" class="add-top text-muted" translate>displays-app.alerts.terms</p>
+			</div>
+		</div><!--warning-->
+
+		<div class="content-box" ng-hide="alertsOn" id="alertsOffWarningContainer">
+			<div class="content-box-body bg-danger">
+				<p class="remove-bottom"><i class="fa fa-warning icon-left"></i><span translate>displays-app.alerts.turnedOffWarning</span> <a href="" ng-click="$parent.alertsOn = true" translate>displays-app.alerts.turnOnShort</a></p>
+			</div>
+		</div><!--warning-->
+
+		<div class="form-group">
+			<label class="control-label" translate>displays-app.alerts.webServiceURL</label>
+
+			<div class="input-group custom-addon">
+				<input id="webserviceUrlInput" type="text" class="form-control" value="{{ALERTS_WS_URL}}?id={{factory.alertKey}}" readonly>
+				<span class="input-group-addon" style="padding-right:0;">
+					<button id="urlResetButton" class="btn btn-default" ng-class="{'disabled' : !termsAccepted}" ng-click="factory.regenerateAlertKey()" translate>displays-app.alerts.reset</button>
+				</span>
+			</div>
+
+		</div><!--form-group-->
+
+		<div class="form-group">
+			<label class="control-label" translate>displays-app.alerts.authenticationName</label>
+			<input id="usernameInput" type="text" class="form-control" ng-model="factory.alertSettings.userName">
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" translate>displays-app.alerts.authenticationPassword</label>
+			<input id="passwordInput" type="password" class="form-control" ng-model="factory.alertSettings.password">
+		</div>
+		<hr>
+		<button id="toggleFilters" class="btn btn-default btn-block add-bottom" ng-click="showFilters = !showFilters">
+			<span ng-show="!showFilters" translate>displays-app.alerts.showFilters</span>
+			<span ng-show="showFilters" translate>displays-app.alerts.hideFilters</span></button>
+
+		<div class="content-box" ng-show="showFilters" id="filtersContainer">
+			<div class="content-box-body">
+				<div class="form-group" id="senderContainer">
+					<label class="control-label" translate>displays-app.alerts.sender</label>
+					<input type="text" class="form-control" ng-model="factory.alertSettings.allowedSenders" ng-list>
+				</div><!--form-group-->
+
+				<div class="form-group" id="handlingContainer">
+					<label class="control-label" translate>displays-app.alerts.handling</label>
+					<input type="text" class="form-control" ng-model="factory.alertSettings.allowedHandlingCodes" ng-list>
+				</div><!--form-group-->
+
+				<div class="form-group" id="codeContainer">
+					<label class="control-label" translate>displays-app.alerts.code</label>
+					<input type="text" class="form-control" ng-model="factory.alertSettings.allowedEventCodes" ng-list>
+				</div><!--form-group-->
+
+				<label class="control-label" id="statusLabel" translate>displays-app.alerts.status</label>
+				<div class="checkbox" ng-repeat="item in factory.allowedStatusesValues">
+					<label class="control-label">
+						<input type="checkbox" checklist-model="factory.alertSettings.allowedStatuses" checklist-value="item.key"> {{item.label}}
+					</label>
+				</div><!--checkbox-->		
+				<br>
+
+				<label class="control-label" id="categoryLabel" translate>displays-app.alerts.category</label>
+				<div class="checkbox" ng-repeat="item in factory.allowedCategoriesValues">
+					<label class="control-label">
+						<input type="checkbox" checklist-model="factory.alertSettings.allowedCategories" checklist-value="item.key"> {{item.label}}
+					</label>
+				</div><!--checkbox-->
+				<br>
+
+				<label class="control-label" id="urgencyLabel" translate>displays-app.alerts.urgency</label>
+				<div class="checkbox" ng-repeat="item in factory.allowedUrgenciesValues">
+					<label class="control-label">
+						<input type="checkbox" checklist-model="factory.alertSettings.allowedUrgencies" checklist-value="item.key"> {{item.label}}
+					</label>
+				</div><!--checkbox-->
+				<br>
+
+				<label class="control-label" id="severetyLabel" translate>displays-app.alerts.severity</label>
+				<div class="checkbox" ng-repeat="item in factory.allowedSeveritiesValues">
+					<label class="control-label">
+						<input type="checkbox" checklist-model="factory.alertSettings.allowedSeverities" checklist-value="item.key"> {{item.label}}
+					</label>
+				</div><!--checkbox-->
+				<br>
+
+				<label class="control-label" id="certaintyLabel" translate>displays-app.alerts.certainty</label>
+				<div class="checkbox" ng-repeat="item in factory.allowedCertaintiesValues">
+					<label class="control-label">
+						<input type="checkbox" checklist-model="factory.alertSettings.allowedCertainties" checklist-value="item.key"> {{item.label}}
+					</label>
+				</div><!--checkbox-->
+			</div>
+		</div><!--ng-show-->
+
+		<hr>
+
+		<label class="control-label" id="textToShowLabel" translate>displays-app.alerts.textToShow</label>
+		<div class="checkbox" ng-repeat="item in factory.textFieldsValues">
+			<label class="control-label">
+				<input type="checkbox" checklist-model="factory.alertSettings.textFields" checklist-value="item.key"> {{item.label}}
+			</label>
+		</div><!--checkbox-->
+		<br>	
+
+		<div class="form-group">
+			<label class="control-label" translate>displays-app.alerts.presentation</label>
+			<div id="presentationField" class="content-box-editable clickable" ng-click="factory.changePresentation()">
+				<div class="label label-tag" presentation-name="factory.alertSettings.presentationId"></div>
+			</div>
+		</div>
+
+		<distribution-selector distribution="factory.alertSettings.distribution" distribute-to-all="distributeToAll"></distribution-selector>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label class="control-label" translate>displays-app.alerts.defaultExpiry</label>
+					<div class="input-group custom-addon">
+						<input id="defaultExpiryInput" type="number" class="form-control" ng-model="factory.alertSettings.defaultExpiry">
+						<span class="input-group-addon">
+							<div class="form-control-static nowrap" translate>displays-app.alerts.minutes</div>
+						</span>
+					</div>
+				</div><!--form-group-->	
+			</div>
+		</div>
+
+
+
+		<div class="content-box" ng-hide="alertsOn">
+			<div class="content-box-body bg-danger">
+				<p class="remove-bottom"><i class="fa fa-warning icon-left"></i><span translate>displays-app.alerts.turnedOffWarning</span> <a href="" ng-click="$parent.alertsOn = true" translate>displays-app.alerts.turnOnShort</a></p>
+			</div>
+		</div><!--warning-->
+
+		<div class="button-row text-right">
+	      <p class="visible-xs"><last-modified change-date="factory.changeDate" changed-by="factory.changedBy"></last-modified></p>
+
+	      <span class="hidden-xs add-right"><last-modified change-date="factory.changeDate" changed-by="factory.changedBy"></last-modified></span>
+
+	      <button id="saveButton" type="submit" class="btn btn-primary" ng-click="factory.save()" ng-disabled="factory.savingAlerts">
+	        {{ factory.savingAlerts ? ('common.saving' | translate) : ('common.save' | translate)}} 
+	        <i class="fa fa-check icon-right"></i>
+	      </button>
+	      
+	      <button id="cancelButton" ui-sref="apps.displays.list" class="btn btn-default">
+	        {{'common.cancel' | translate}}
+	        <i class="fa fa-times icon-right"></i>
+	      </button>
+	    </div>
+
+	</div><!--container-->
+
+
+
+	<br>
+	<br><br><br><br>

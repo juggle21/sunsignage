@@ -1,0 +1,71 @@
+<div id="presentationPropertiesModal">
+  <div class="modal-header">
+    <button id="dismissButton" type="button" class="close" ng-click="dismiss()">
+      <i class="fa fa-times"></i>
+    </button>
+    <h3 class="modal-title" translate>editor-app.properties.title</h3>
+  </div>
+  <div class="modal-body" stop-event="touchend">
+    <form role="form" name="presentationPropertiesDetails" ng-enter="apply()" novalidate>
+    <div class="form-group" ng-class="{'has-error': !presentationPropertiesDetails.name.$pristine && presentationPropertiesDetails.name.$invalid}" show-errors>
+      <label id="nameLabel" class="control-label">{{'editor-app.properties.labels.name' | translate}} *</label>
+      <input id="nameInput" name="name" type="text" class="form-control" placeholder="Name" ng-model="presentationProperties.name" required focus-me="!presentationProperties.id">
+      <p class="text-danger" ng-show="!presentationPropertiesDetails.name.$pristine && presentationPropertiesDetails.name.$error.required" translate>
+        editor-app.playlistItem.required
+      </p>
+      <p id="presentationId" class="remove-top text-muted half-top" ng-show="presentationProperties.id"><small>{{'editor-app.properties.labels.id' | translate}}: {{presentationProperties.id}}</small></p>
+    </div><!--form-control-->
+
+    <button id="copyPresentationButton" class="btn btn-default" ng-show="presentationProperties.id" ng-click="copy()">{{'editor-app.properties.labels.copy' | translate}} <i class="fa fa-copy icon-right"></i></button>
+
+    <hr>
+    <div class="form-group">
+       <div class="checkbox">
+           <label>
+               <input name="sharePresentation" type="checkbox" ng-model="presentationProperties.isTemplate">{{'editor-app.properties.labels.shareAsTemplate' | translate}}</label>
+       </div>
+   </div>
+
+   <div class="form-group" ng-if="presentationProperties.isTemplate" require-role="sa">
+       <div class="checkbox">
+           <label>
+               <input name="sharePresentation" type="checkbox" ng-model="presentationProperties.isStoreProduct">{{'editor-app.properties.labels.isStoreProduct' | translate}}</label>
+       </div>
+   </div>
+
+   <hr>
+    <div class="form-group">
+      <label id="resolutionLabel" translate>editor-app.properties.labels.resolution</label>
+      <resolution-selector></resolution-selector>
+    </div><!--form-group-->
+
+    <div class="form-group">
+      <label id="backgroundLabel" translate>editor-app.properties.labels.background</label>
+      <background-image-setting id="backgroundImageSettings" background="presentationProperties.background" company-id="{{companyId}}" color-parent-container-class="'background-color-picker'" color-container-class="'background-color-picker-input'" position-parent-container-class="'background-image-position'" position-container-class="'background-image-position-input'" repeat-parent-container-class="'background-image-position'" repeat-container-class="'background-image-position-input'"></background-image-setting>
+    </div>
+
+    <div class="form-group">
+      <label id="playUntilDonePlaceholderLabel" class="control-label" translate>editor-app.properties.labels.playUntilDone</label>
+      <select id="playUntilDonePlaceholderSelect" class="form-control" ng-model="presentationProperties.donePlaceholder" ng-options="placeholder.id as placeholder.id for placeholder in placeholders"></select>
+    </div><!--form-group-->
+
+    <div class="form-group">
+      <label id="hideMousePointerCheckboxLabel" class="control-label">
+        <input id="hideMousePointerCheckbox" type="checkbox" ng-model="presentationProperties.hidePointer"> {{'editor-app.properties.labels.hideMouse' | translate}}
+      </label>
+    </div>
+
+  </form>
+
+  <!-- Indicates delete or destructive action -->
+  <button id="deleteButton" ng-show="presentationProperties.id" require-role="cp" type="button" class="btn btn-danger btn-fixed-width" ng-click="confirmDelete()">
+    {{'common.delete' | translate}} Presentation<i class="fa fa-white fa-trash-o icon-right"></i>
+  </button>
+
+  </div><!--modal-body-->
+  <div class="modal-footer">
+
+    <button id="applyButton" class="btn btn-primary" ng-click="apply()" ng-disabled="presentationPropertiesDetails.$invalid">{{'common.apply' | translate}} <i class="fa fa-check icon-right"></i></button>
+    <button id="presentationPropertiesCancelButton" class="btn btn-default" ng-click="dismiss()">{{'common.cancel' | translate}} <i class="fa fa-times icon-right"></i></button>
+  </div>
+</div>
