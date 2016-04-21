@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sunsignage-1274",
+  "private_key_id": "3059ca1e7e09d4d5980f99431dc49859152a7c7e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyirDKaLdh0k76\nyeAfppeKxjnAT29tsUUyk2nCEL12QYX3V1F6AxVbBlYTmC7ckr3bT1YWg/sNaTM1\n/1BOIqCCHtX0oGw3jU5zWc4tyC1yzdnkcvPOAsnU4WsfzDnMAHgZ5AJ8AV0JG38W\nn2fnvbpKdNmrJQ+C0BfL7lQY0LgSWqvlwRHM/rGyMGvnicQz5CUN+Sok3wClJBAk\n179itgaBUiKz3Zg1Elby/Plh4P3of7bWrDsb8ZzD7G7jJp6szhePXCY9EoNm/F7q\nuJZmLGUnQo+2FvPc5XWICQ4H02+S7Cf3izWqDiqGsspy2GQzWwiPtLcsvQ0N0ckC\nyhLQ0zOrAgMBAAECggEAX8AnffXY2zpZpv/bFb5XKVKTqEIxpSdbz/rkzfICWchc\nG0EV7hR3QIDOauXDxAFilpoetiaD3jZcA4pwO+cwI3h8EBx0zPoYZ55zB3SCgz5I\nq87GV+aA7Y0S0VPKb1CVGHWCq5Rjm73GU5Cbvdmvbbzq+3D9t474JCMlsMVG4ngc\nFE7BBOlu0iwCxYc8lDCGiTclKniL8owtMWkSTfiYGpJcZFAvPWk7g/fzrNiW4zH4\n7MLm6Z1x5vKHwZJwzsXC2/aByOm3Cye3tfLAxaLXBdNjmD4sN+bQ7oZcmzpQu9TE\ndSOPa4T/qPe8DRcw7r7a7O6ZeKi1OGiJAWnmEGCpkQKBgQD5LLPZBG1jah19SWNQ\nmS5SlqzY0imGhI4ccCdEjtMs8KQVs2dwN4ON/JUbm018I84aQVnqq/kgPORCFegR\ndjhKZCWiSFOwTlC5DNGx3Gm1+Zq/FPTRhWL8UNctXh3SLv6sdQHQRDo1yUuHJXpP\nNIiuqXIwXOLxkJXIvCltlwMBIwKBgQC3bq+0Ppi49/vSRAWOwT1/XGbZcYzWmbK3\nmLQYNqOiVsdGRMGtQ15XeUwu/2T1cTdlzffUzNmG52Rd7Bbf443fRy/cKJRvDkdF\ntbx7WBxBHet0n94feLVfh+OExltVbScHYR51yRZLaoMWIyZCde74oJSJvtBp5bal\n78UpkYwf2QKBgQCyQFNsZWlnnAr6jJx6lQp5VIbUGQxRydPr7iN5PP8+/+syBwRx\nV5VJ5q44cJIuw2J2j9emNF5kvIrB5+/7Reog9aGihUExN+UxbEU6iqYo4yXbmj9E\n/7n/LEmyj8ifirTvZEjm11gZECZyyNHFhZxd7qPciyZijv9H+atdVZF1pwKBgQCR\nbnhv95EuVa6aLsQZQqx3ZdNFYvm+y20ekzt2Vxu1ggfMdob30AnkYI8+U86/qlu5\no2tylFeC1cKFlMEuEURSWiZf7uyAgFmRs10Uje8Y0Zf0hyuc2B809pA0nO+c80WW\nXDHCQQQkFvaHfqa+2rH0/ZvG+jpTO4VsWoV/R55JQQKBgHClU8IOLAhrFgMO8+i1\n8k12KJhwap/ug3MeYIjEIaqXWIHCKAb7N4W+INVTl/hbIwtNSyUf1lW/E/Kui079\n/ItpuNmJGmEbRVsWSKYk5kc9nmslyhvaH1qDPq2udsBArZx/VB4LJ6lXhVSAi8iT\nr67oE5nXzPxUiEpQIy1Tv01n\n-----END PRIVATE KEY-----\n",
+  "client_email": "sunsignage@sunsignage-1274.iam.gserviceaccount.com",
+  "client_id": "102865604361019610330",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sunsignage%40sunsignage-1274.iam.gserviceaccount.com"
+}

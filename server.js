@@ -35,15 +35,20 @@
 
 	mongoose.connect('mongodb://' + argv.be_ip + ':80/my_database');
 
+<<<<<<< HEAD
     app.use('/js', express.static(__dirname + '/js'));
    	app.use('/bower_components', express.static(__dirname + '/bower_components'));
+=======
+    //app.use('/js', express.static(__dirname + '/js'));
+   	//app.use('/bower_components', express.static(__dirname + '/bower_components'));
+>>>>>>> 5128a6eb99d70778396bda7f04791df9e3823b05
 	app.use(morgan('dev')); 										// log every request to the console
 	app.use(bodyParser.urlencoded({'extended':'true'})); 			// parse application/x-www-form-urlencoded
 	app.use(bodyParser.json()); 									// parse application/json
 	app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 	app.use(methodOverride());
 
-	// define model =================
+	/* define model =================
 	var Todo = mongoose.model('Todo', {
 		title : String,
 		completed: Boolean
