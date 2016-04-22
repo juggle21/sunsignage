@@ -35,23 +35,23 @@ angular.module('risevision.displays.services')
         customList: function (result) {
           var deferred = $q.defer();
 
-          $ajax({
+          jQuery.ajax({
             url: '',
             dataType: 'jsonp',
             jsonpCallBack: 'callback',
             type: 'GET',
             success: function (data) {
               var customDisplays = [];
-              var userDisplays = eval(data);
+              var userDisplays = jQuery.parseJSON(data);
 
-              customItems.push(_.findWhere(result.items, {
-                id: userItem.id
+              customDisplays.push(_.findWhere(result.items, {
+                id: userDisplays.id
               }));
-              result.items = customItems;
+              result.items = customDisplays;
               deferred.resolve(result);
             },
             fail: function (error) {
-              $log.debug("Failed to get custom list of displays",
+              $log.debug('Failed to get custom list of displays',
                 error);
             }
           });
