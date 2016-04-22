@@ -1,0 +1,33 @@
+
+<form role="form">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"
+		  aria-hidden="true" ng-click="closeModal()">
+			<i class="fa fa-times"></i>
+		</button>
+		<h2 id="switch-company" class="modal-title">
+			하위 회사 선택
+		</h2>
+	</div>
+	<div class="modal-body select-subcompany-modal" stop-event="touchend">
+	  <!-- Search -->
+		<search-filter filter-config="filterConfig" search="search" do-search="doSearch"></search-filter> 
+
+		<!-- List of Companies -->
+		<div class="list-group scrollable-list half-top"
+		  scrolling-list="loadCompanies()"
+		  rv-spinner rv-spinner-key="company-selector-modal-list"
+			rv-spinner-start-active="1"
+		>
+			<div class="list-group-item"  ng-repeat="company in companies.list" ng-click="setCompany(company)">
+				<p class="list-group-item-text"><strong>{{company.name}}</strong><br/><small class="text-muted">{{company | fullAddress}}</small>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default btn-fixed-width" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">취소
+			<i class="fa fa-white fa-times icon-right"></i>
+		</button>
+	</div>
+</form>

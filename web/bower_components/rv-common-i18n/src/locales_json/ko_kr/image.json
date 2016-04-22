@@ -1,0 +1,18 @@
+{
+  "auto-hide": "네비게이션 자동 숨김",
+  "duration": {
+    "label": "이미지 노출 시간"
+  },
+  "errors": {
+    "file-type": "올바른 이미지를 위한 URL을 입력하세요."
+  },
+  "pause": {
+    "label": "If image is touched resume playing after"
+  },
+  "settings": "이미지 설정",
+  "url": {
+    "file": "이미지 파일",
+    "folder": "이미지 폴더",
+    "label": "당신의 이미지를 보여지기 원합니까?"
+  }
+}

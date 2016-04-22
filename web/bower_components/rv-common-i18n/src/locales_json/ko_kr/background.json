@@ -1,0 +1,24 @@
+{
+  "choice": "이미지 사용",
+  "color": {
+    "label": "색상"
+  },
+  "heading": "배경",
+  "image": {
+    "position": {
+      "label": "이미지 위치"
+    },
+    "repeat": {
+      "both": "Both",
+      "horizontal": "수평",
+      "label": "이미지 반복",
+      "noRepeat": "없음",
+      "vertical": "수직"
+    },
+    "scale": "스케일 맞춤",
+    "selector": {
+      "file": "스토리지",
+      "title": "스토리지에서 이미지를 선택하거나 올바른 URL을 입력"
+    }
+  }
+}

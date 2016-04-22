@@ -1,0 +1,50 @@
+{
+  "name": "rv-common-app-components",
+  "version": "0.1.0",
+  "description": "Various common compoonents shared across Angular-based apps for Rise-Vision",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rise-Vision/common-app-components.git"
+  },
+  "contributors": [
+    "Alex Deaconu"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Rise-Vision/common-app-components/issues"
+  },
+  "dependencies": {
+    "bower": "^1.3.3"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-as-promised": "~4.1.1",
+    "del": "~1.1.1",
+    "event-stream": "^3.1.5",
+    "gulp": "^3.8.10",
+    "gulp-bower": "~0.0.10",
+    "gulp-bump": "~0.1.8",
+    "gulp-concat": "^2.2.0",
+    "gulp-connect": "^2.0.5",
+    "gulp-ng-html2js": "^0.2.0",
+    "gulp-minify-html": "^1.0.1",
+    "gulp-jsbeautifier": "0.0.3",
+    "gulp-jshint": "~1.5.5",
+    "gulp-protractor": "~0.0.8",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "~2.2.17",
+    "gulp-watch": "^0.6.8",
+    "jshint-stylish": "^0.2.0",
+    "jshint": "2.8.0",
+    "merge-stream": "^0.1.7",
+    "run-sequence": "^0.3.2",
+    "widget-tester": "git://github.com/Rise-Vision/widget-tester.git",
+    "rv-common-e2e": "git://github.com/Rise-Vision/rv-common-e2e.git"
+  },
+  "homepage": "https://github.com/Rise-Vision/common-app-components"
+}

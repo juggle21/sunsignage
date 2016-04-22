@@ -1,0 +1,34 @@
+{
+  "name": "rv-loading",
+  "authors": [
+    "Steven Sherre (steve.sherrie@risevision.com)",
+    "Xiyang Chen (settinghead@gmail.com)"
+  ],
+  "description": "",
+  "dependencies": {
+    "angular-spinner": "~0.4.0",
+    "angular-mocks": "~1.2.24"
+  },
+  "devDependencies": {
+    "q": "1.0.1"
+  },
+  "main": [
+    "loading.js",
+    "demo.html"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/Rise-Vision/rv-loading",
+  "_release": "fe8b7e5caa",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fe8b7e5caa0c6662aecd10e67d6904d9c30910e9"
+  },
+  "_source": "https://github.com/Rise-Vision/rv-loading.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/rv-loading.git"
+}

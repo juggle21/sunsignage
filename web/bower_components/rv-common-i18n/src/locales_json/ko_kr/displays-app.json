@@ -1,0 +1,200 @@
+{
+  "actions": {
+    "new": "디스플레이 추가"
+  },
+  "add": {
+    "error": "디스플레이 추가 실패!"
+  },
+  "alerts": {
+    "acceptTerms": "Alerts 활성화를 위해 약관에 동의해 주세요",
+    "authenticationName": "인증 이름",
+    "authenticationPassword": "인증 패스워드",
+    "categories": {
+      "cbrne": "화학 , 생물학 , 방사능 , 핵 및 폭발물",
+      "env": "환경",
+      "fire": "화재",
+      "geo": "지리정보",
+      "health": "건강",
+      "infra": "인프라",
+      "met": "기상",
+      "other": "기타",
+      "rescue": "구조",
+      "safety": "안전",
+      "security": "보안",
+      "transport": "운송"
+    },
+    "category": "분야",
+    "certainties": {
+      "likely": "Likely",
+      "observed": "Observed",
+      "possible": "Possible",
+      "unknown": "Unknown",
+      "unlikely": "Unlikely"
+    },
+    "certainty": "Certainty",
+    "code": "Code",
+    "defaultExpiry": "Default Expiry",
+    "handling": "Handling",
+    "hideFilters": "Hide Filters",
+    "iAccept": "약관에 동의합니다..",
+    "minutes": "분",
+    "presentation": "스크린",
+    "reset": "초기화",
+    "sender": "전송자",
+    "severities": {
+      "extreme": "Extreme",
+      "minor": "Minor",
+      "moderate": "Moderate",
+      "severe": "Severe",
+      "unknown": "Unknown"
+    },
+    "severity": "Severity",
+    "showFilters": "Show Filters",
+    "status": "Status",
+    "statuses": {
+      "actual": "Actual",
+      "draft": "Draft",
+      "exercise": "Exercise",
+      "system": "System",
+      "test": "Test"
+    },
+    "terms": "The Alert Service is based upon the Common Alert Protocol version 1.2. This standard does not require authentication or a secure connection, which could result in somebody sending false Alerts by pretending to be your Alerts provider. We highly recommend that, at the very least, you have your Alerts provider connect to our service with HTTPS, not HTTP, and that you require an Authentication Name and Password for that connection. That password should be complex and changed regularly. You should test your Alerts system at least weekly. You have read and understood this disclaimer and you agree that Rise Vision cannot be responsible for the erroneous showing of Alert Messages on your Displays.",
+    "textFields": {
+      "description": "내용",
+      "headline": "표제",
+      "instruction": "Instruction"
+    },
+    "textToShow": "긴급메시지 문구 표시",
+    "title": "긴급메시지",
+    "turnOff": "긴급 메시지 끄기",
+    "turnOn": "긴급 메시지 켜기",
+    "turnOnShort": "켜기",
+    "turnedOffWarning": "긴급메시지가 꺼져 있는 상태로 고객님의 디스플레이로 전송되고 있지 않습니다.",
+    "urgencies": {
+      "expected": "Expected",
+      "future": "Future",
+      "immediate": "Immediate",
+      "past": "Past",
+      "unknown": "Unknown"
+    },
+    "urgency": "Urgency",
+    "viewTerms": "이용 약관 보기",
+    "webServiceURL": "웹 서비스 URL"
+  },
+  "details": {
+    "deleteTitle": "디스플레이 삭제중",
+    "deleteWarning": "디스플레이를 삭제 하시겠습니까?",
+    "error": "디스플레이 정보 수정을 실패하였습니다.!",
+    "unsavedTitle": "변경 내역",
+    "unsavedWarning": "변경 내역이 있습니다. 저장 하시겠습니까?"
+  },
+  "download": {
+    "linux32": "Download Player for Ubuntu 14.04 LTS [32-bit]",
+    "linux64": "Download Player for Ubuntu 14.04 LTS [64-bit]",
+    "win32": "Download Player for Windows 10 [32-bit]",
+    "win64": "Download Player for Windows 10 [64-bit]"
+  },
+  "fields": {
+    "address": {
+      "city": "도시",
+      "country": {
+        "name": "국가",
+        "placeholder": "&lt; 국가 선택 &gt;"
+      },
+      "description": "설명",
+      "postalCode": "Zip / Postal Code",
+      "province": {
+        "name": "시도",
+        "provincePlaceholder": "&lt; 지방 선택 &gt;",
+        "statePlaceholder": "&lt; 주 선택 &gt;"
+      },
+      "street": "거리",
+      "timezone": {
+        "name": "시간 존",
+        "placeholder": "&lt; 시간 존 선택 &gt;"
+      },
+      "unit": "단위",
+      "useCompany": "회사 주소 사용"
+    },
+    "controls": {
+      "download": "플레이어 다운로드",
+      "error": "에러:",
+      "howto": "어떻게 내 디바이스에 스크린을 보여줄 수 있습니까?",
+      "reboot": {
+        "name": "플레이어 재시작",
+        "success": "재부팅 신호가 전송 되었습니다.",
+        "title": "디스플레이 재부팅중",
+        "warning": "디스플레이 컴퓨터의 플레이어가 재부팅되고 현재 스케줄 컨텐츠가 중단 됩니다. 계속 진행 하시겠습니까?"
+      },
+      "restart": {
+        "name": "플레이어 재시작",
+        "success": "재시작 신호가 전송 되었습니다.",
+        "title": "디스플레이 재시작중",
+        "warning": "디스플레이 컴퓨터의 플레이어가 재부팅되고 현재 스케줄 컨텐츠가 중단 됩니다. 계속 진행 하시겠습니까?"
+      }
+    },
+    "id": "디스플레이 아이디:",
+    "monitor": {
+      "name": "모니터명",
+      "warning": "사의 모니터링 이메일이 설정 되지 않았습니다. 설정을 위해 회사 환경 설정으로 이동 하세요."
+    },
+    "name": {
+      "name": "이름",
+      "required": "필수 항목"
+    },
+    "player": {
+      "browser": {
+        "installed": "브라우져 버전:",
+        "recommended": "추천 브라우져:",
+        "upgrade": {
+          "autoUpgrade": "자동 업그레이드",
+          "name": "브라우져 업그레이드:",
+          "userManaged": "사용자 관리"
+        }
+      },
+      "install": {
+        "heading": "플레이어 설치",
+        "id": "고객님의 디스플레이 아이디는"
+      },
+      "ipAddress": "아이피 주소:",
+      "localIpAddress": "로컬 아이피 주소:",
+      "operatingSystem": "운영 시스템:",
+      "orientation": {
+        "0": "Landscape",
+        "90": "Portrait",
+        "180": "Landscape (flipped)",
+        "270": "Portrait (flipped)",
+        "name": "회전:"
+      },
+      "playerVersion": "플레이어 버전:",
+      "playerWarning": "A Player has not been configured for your Display. To configure your Display, select your Operating System below and install the software <b>on the device</b> that will operate your Display. When the Player starts for the first time you will be prompted to enter the Display ID (above) to link the Player with the Display that you have setup here. Further setup details can be <a href=\"http://help.risevision.com/user/create-a-display/\" target=\"_blank\">found here</a>.",
+      "resolution": "해상도:",
+      "viewerVersion": "Viewer 버전:"
+    },
+    "reboot": "재기동:",
+    "status": {
+      "active": "활성",
+      "inactive": "비활성",
+      "name": "상태"
+    }
+  },
+  "landing": {
+    "manageDisplaysText": "언제 어디서든 당신의 디지털 사이니지 플레이어를 관리 및 모니터링 할 수 있습니다.."
+  },
+  "list": {
+    "empty": "생성된 디스플레이가 없습니다.",
+    "filter": {
+      "filters": "필터",
+      "placeholder": "디스플레이 검색\t"
+    },
+    "heading": {
+      "address": "주소",
+      "lastConnection": "최종연결일시",
+      "name": "이름",
+      "status": "상태"
+    },
+    "no-results": "검색 결과가 없습니다.",
+    "searchNotification": "검색 결과 는 ​​하위 기업에 속하는 디스플레이를 포함 할 수 있습니다."
+  },
+  "title": "디스플레이"
+}

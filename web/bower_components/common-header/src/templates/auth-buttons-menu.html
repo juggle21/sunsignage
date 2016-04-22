@@ -1,0 +1,19 @@
+<company-buttons
+  ng-show="isRiseVisionUser"
+  ng-controller="CompanyButtonsCtrl"
+></company-buttons>
+
+<ul>
+  <li ng-show="isRiseVisionUser">
+    <a href="" ng-click="userSettings()" class="user-settings-button action">
+      <i class="fa fa-user"></i>
+      <span class="item-name">사용자 설정</span>
+    </a>
+  </li>
+
+  <span ng-if="isLoggedIn && !isRiseVisionUser" class="google-account" class="username">{{username}}</span>
+
+  <li class="dropdown-footer text-right" ng-show="isLoggedIn">
+    <button class="sign-out-button btn btn-sm btn-default" ng-controller="SignOutButtonCtrl" ng-click="logout()">로그 아웃<i class="fa fa-sign-out icon-right"></i>
+  </li>
+</ul>

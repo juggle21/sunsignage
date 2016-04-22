@@ -1,0 +1,119 @@
+<!-- Common Header Navbar -->
+<nav class="navbar navbar-default navbar-static-top"
+	ng-class="{'active-banner': isSubcompanySelected() || isTestCompanySelected()}" role="navigation">
+	<div class="container">
+		<div class="navbar-header" style="width: 100%;">
+			<a class="navbar-brand visible-md visible-lg"
+			  href="http://www.risevision.com/" target="{{newTabHome ? '_blank' : '_self'}}" ng-if="!inRVAFrame">
+				<img src="images/logo.png" class="img-responsive logo-small" width="113" height="42" alt="Sun Signage">
+			</a>
+			<a class="navbar-brand hidden-md hidden-lg text-center"
+				href="" off-canvas-toggle>
+				<i class="fa fa-bars"></i>
+			</a>
+			<!-- If User Authenticated -->
+			<!-- Action Nav -->
+			<ul class="nav navbar-nav navbar-right actions-nav pull-right">
+				<!-- Help Dropdown -->
+				<ng-include
+					replace-include
+					ng-controller="HelpDropdownButtonCtrl"
+					src="'help-dropdown.html'"
+				></ng-include>
+				<!-- END Help Dropdown -->
+				<!-- Notifications -->
+				<ng-include
+					replace-include
+					ng-if="!inRVAFrame"
+				  ng-controller="SystemMessagesButtonCtrl"
+					src="'system-messages-button.html'"
+				></ng-include>
+				<!-- Shopping Cart -->
+				<ng-include
+					replace-include
+					ng-controller="ShoppingCartButtonCtrl"
+					src="'shoppingcart-button.html'"
+				></ng-include>
+				<!-- Shopping Cart -->
+				<ng-include
+					replace-include
+					ng-if="inRVAFrame"
+					ng-controller="CloseFrameButtonCtrl"
+					src="'close-frame-button.html'"
+				></ng-include>
+				<!-- Current App -->
+				<ng-include
+					ng-if="!inRVAFrame"
+					replace-include
+					src="'app-nav-buttons.html'"
+				></ng-include>
+				<!-- END Current App -->
+				<!-- Auth -->
+				<ng-include
+					replace-include
+					ng-if="!inRVAFrame"
+				  ng-controller="AuthButtonsCtr"
+					src="'auth-buttons.html'"
+				></ng-include>
+				<li ng-if="inRVAFrame"
+				  ng-controller="AuthButtonsCtr"></li>
+			</ul>
+			<!-- END Action Nav -->
+
+			<!-- Nav Links -->
+			<div class="navbar-collapse navbar-left hidden-xs hidden-sm">
+				<ul class="nav navbar-nav">
+					<li ng-repeat="opt in navOptions">
+						<a ng-if="opt.cid" ng-href="{{opt.link}}" link-cid target="{{opt.target}}" ng-class="{'selected': opt.states && opt.states.indexOf(navSelected) > -1}">{{opt.title}}</a>
+						<a ng-if="!opt.cid" ng-href="{{opt.link}}" target="{{opt.target}}" ng-class="{'selected': opt.states && opt.states.indexOf(navSelected) > -1}">{{opt.title}}</a>
+					</li>
+					<li ng-if="!inRVAFrame && !hideHelpMenu">
+						<a href="http://www.risevision.com/help/" target="_blank">
+							Help
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- END Nav Links -->
+		</div>
+
+		<ng-include
+		replace-include
+		ng-controller="TestCompanyBannerCtrl"
+		src="'test-company-banner.html'"></ng-include>
+		
+		<ng-include
+		replace-include
+		ng-controller="SubcompanyBannerCtrl"
+		src="'subcompany-banner.html'"></ng-include>
+	</div>
+</nav>
+
+<div ng-show="cookieEnabled === false" class="bg-warning add-padding text-center">
+    <small><strong>쿠키가 비활성화 상태입니다.</strong> Sun Signage가 제대로 작동 하기 위해 쿠키를 사용할 필요가 있습니다. 웹 브라우저에서 쿠키와 타사 쿠키를 사용하도록 설정하고 이 페이지를 새로 고침하세요.</small>
+</div>
+
+<ng-include
+	replace-include
+	ng-controller="GlobalAlertsCtrl"
+	src="'global-alerts.html'"></ng-include>
+
+<!-- END Common Header Navbar -->
+
+<!-- Off Canvas Version of the Nav -->
+<nav class="off-canvas-nav" off-canvas-nav>
+  <ul class="nav nav-pills nav-stacked">
+  	<li off-canvas-toggle>
+  		<i class="fa fa-times fa-2x pull-right"></i>
+  		<img src="/images/logo.png" class="img-responsive logo-small" width="113" height="42" alt="Sun Signage">
+  	</li>
+    <li ng-repeat="opt in navOptions">
+			<a ng-if="opt.cid" ng-href="{{opt.link}}" link-cid target="{{opt.target}}">{{opt.title}}</a>
+			<a ng-if="!opt.cid" ng-href="{{opt.link}}" target="{{opt.target}}">{{opt.title}}</a>
+		</li>
+		<li ng-if="!hideHelpMenu">
+			<a target="_blank" href="http://www.risevision.com/help">Help</a>
+		</li>
+  </ul>
+</nav>
+<iframe name="logoutFrame" id="logoutFrame" style='display:none'></iframe>

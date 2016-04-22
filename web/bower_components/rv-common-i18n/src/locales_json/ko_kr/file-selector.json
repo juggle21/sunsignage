@@ -1,0 +1,12 @@
+{
+  "buttons": {
+    "custom": "Custom URL",
+    "preview": "파일 미리보기"
+  },
+  "errors": {
+    "storage": {
+      "image": "유효하지 않은 형식의 이미지 입니다. 지원 가능한 이미지 : (jpg, jpeg, png, bmp, svg, gif)",
+      "video": "유효하지 않은 형식의 영상입니다. 지원 가능한 영상 : (webm, mp4, ogg, ogv)"
+    }
+  }
+}

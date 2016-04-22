@@ -1,0 +1,44 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal"
+    aria-hidden="true" ng-click="closeModal()">
+    <i class="fa fa-times"></i>
+  </button>
+  <h2 id="company-users-label" class="modal-title">회사 사용자</h2>
+</div>
+<div class="modal-body company-users-modal" stop-event="touchend">
+  <!-- CSV Button -->
+  <div class="row action-bar add-bottom" ng-if="false">
+    <button class="btn btn-secondary" ng-csv="users"
+      filename="users.csv">다운로드</button>
+  </div>
+  <!-- Search -->
+  <div class="input-group company-search add-bottom">
+    <input id="csSearch" type="text" class="form-control"
+      placeholder="Search Users"
+      ng-model="search.searchString"
+      ng-enter="doSearch()">
+      <span class="input-group-addon primary-bg" ng-click="doSearch()">
+        <i class="fa fa-search"></i>
+      </span>
+  </div>
+  <!-- List of Users -->
+  <div class="list-group scrollable-list company-users-list"
+    rv-spinner
+    rv-spinner-key="company-users-list"
+    rv-spinner-start-active="1">
+    <div class="list-group-item  company-users-list-item"
+      ng-repeat="user in users | orderBy:sort.field:sort.descending | filter:userSearchString" ng-click="editUser(user.username)">
+      <p class="list-group-item-text"><strong>{{user.firstName}} {{user.lastName}}</strong> <small class="text-muted">{{user.email}}</small></p>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success add-company-user-button"
+    ng-click="addUser()">사용자 추가
+    <i class="fa fa-white fa-plus icon-right"></i>
+  </button>
+  <button type="button" class="btn btn-default close-company-users-button"
+    data-dismiss="modal" ng-click="closeModal()">
+    취소 <i class="fa fa-white fa-times icon-right"></i>
+  </button>
+</div>

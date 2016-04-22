@@ -1,0 +1,175 @@
+{
+  "add": {
+    "error": "스크린 생성에 실패 하였습니다.!"
+  },
+  "addWidget": {
+    "settingsUrl": "URL 설정",
+    "title": "URL로 위젯 추가",
+    "url": "URL"
+  },
+  "details": {
+    "deleteTitle": "스크린 삭제중",
+    "deleteWarning": "스크린을 삭제 하시겠습니까?",
+    "error": "스크린 수정을 실패하였습니다.!",
+    "published": "완료",
+    "remove": "삭제",
+    "removePlaceholder": "플레이리스트 삭제",
+    "removePlaceholderWarning": "스크린에서 플레이리스트를 삭제 하시겠습니까?",
+    "removePlaylistItem": "아이템 삭제",
+    "removePlaylistItemWarning": "선택한 컨텐츠를 플레이리스트에서 삭제 하시겠습니까?",
+    "revised": "완료전",
+    "saved": "저장",
+    "unsavedTitle": "변경됨",
+    "unsavedWarning": "변경 내역이 있습니다. 저장하시겠습니까?"
+  },
+  "goToStore": {
+    "message": "프리미엄 템플릿 구매로 보다 다양한 템플릿을 보실 수 있습니다.",
+    "purchase": "스토어에서 구매",
+    "title": "프리미엄 템플릿",
+    "view": "스토어 보기"
+  },
+  "landing": {
+    "manageEditorText": "언제 어디서든 당신의 디시털 사이니지에 보여줄 HTML 컨텐츠를 제작 및 관리 할 수 있습니다."
+  },
+  "list": {
+    "actions": {
+      "add": "스크린 추가",
+      "fromTemplate": "From 템플릿",
+      "new": "신규"
+    },
+    "empty": "생성된 스크린이 없습니다.",
+    "error": "스크린 가져오기를 실패 하였습니다. 나중에 다시 시도 하십시요.",
+    "filter": {
+      "filters": "필터",
+      "placeholder": "스크린 검색"
+    },
+    "heading": {
+      "changeDate": "최종 수정일",
+      "name": "이름",
+      "status": "상태"
+    },
+    "no-results": "검색 결과가 없습니다.",
+    "title": "스크린"
+  },
+  "playlistItem": {
+    "add": "컨텐츠 추가",
+    "content": "컨텐츠",
+    "duration": "반복",
+    "legacyWarningPart1": "This is a Gadget and it is not supported in this Editor. To configure a Gadget please use the",
+    "legacyWarningPart2": "이전 버전",
+    "legacyWarningPart3": "of the Editor.",
+    "name": "컨텐츠명",
+    "no-playlistItem": "컨텐츠 없음",
+    "playUntilDone": "종료될 때까지 재생",
+    "presentation": "스크린",
+    "required": "필수 항목",
+    "seconds": "초",
+    "select": "선택",
+    "title": "컨텐츠 편집"
+  },
+  "properties": {
+    "labels": {
+      "background": "배경",
+      "copy": "스크린 복사",
+      "height": "높이",
+      "hideMouse": "마우스 포인터 숨기기",
+      "id": "ID",
+      "isStoreProduct": "이 스크린은 스토어 상품입니다.",
+      "name": "이름",
+      "playUntilDone": "종료 될 때까지 재생",
+      "resolution": "해상도",
+      "shareAsTemplate": "스크린을 당신의 관리 회사와 템플릿으로 공유 합니다.",
+      "width": "넓이"
+    },
+    "title": "스크린 속성",
+    "transition": {
+      "fade": "Fade",
+      "label": "Transition",
+      "none": "없음",
+      "slideDown": "아래로 슬라이드",
+      "slideLeft": "왼쪽으로 슬라이드",
+      "slideRight": "오른쪽으로 슬라이드",
+      "slideUp": "위로 슬라이드"
+    },
+    "warnings": {
+      "duplicate": "플레이리스트 이름의 중복을 허용하지 않습니다.",
+      "invalid": "플레이리스트 이름이 올바르지 않습니다.",
+      "invalidUrl": "URL이 올바르지 않습니다",
+      "required": "필수입력항목입니다."
+    }
+  },
+  "sharedTemplates": {
+    "name": "템플릿명",
+    "preview": "미리보기",
+    "search": "템플릿검색",
+    "title": "템플릿"
+  },
+  "storeProduct": {
+    "add": "추가",
+    "content": {
+      "search": "컨텐츠 검색",
+      "title": "컨텐츠 추가"
+    },
+    "details": "상세",
+    "productTags": {
+      "all": "전체",
+      "business": "비즈니스",
+      "education": "교육",
+      "healthcare": "헬스케어",
+      "hospitality": "병원",
+      "lifestyle": "생활",
+      "other": "기타",
+      "retail": "소매점",
+      "worship": "예배"
+    },
+    "templates": {
+      "blank": "공백",
+      "cantFind": "원하는 템플릿이 없습니까?",
+      "search": "템플릿 검색",
+      "suggest": "템플릿을 제한하세요!",
+      "title": "신규 스크린 추가"
+    }
+  },
+  "subscription": {
+    "buy": "구매",
+    "status": {
+      "daysRemaining": "남은 일자",
+      "daysTrial": "무료 일자",
+      "premium": "프리미엄"
+    },
+    "viewAccount": "계정 보기"
+  },
+  "title": "편집기",
+  "workspace": {
+    "legacyWarning": {
+      "confirmation": "클래식 편집기 열기",
+      "message": "This Presentation contains Gadgets, Video Items, Image Items, HTML Items, Text Items or Presentation Items that are not supported in this Editor.<br/>To modify this Presentation please use the previous version of the Editor.",
+      "title": "사용 정지 예정 항목"
+    },
+    "sidebar": {
+      "edit": {
+        "playlist": "컨텐츠 목록",
+        "properties": "속성",
+        "settings": {
+          "height": "높이",
+          "left": "왼쪽위치",
+          "top": "상단위치",
+          "visible": "보이기",
+          "width": "넓이",
+          "zOrder": "우선 순위"
+        },
+        "title": "플레이리스트 편집"
+      },
+      "no-placeholder": "등록된 플레이리스트가 없습니다.",
+      "title": "플레이리스트"
+    },
+    "toolbar": {
+      "addPlaceholder": "플레이리스트 추가",
+      "mode": {
+        "design": "디자인",
+        "html": "HTML"
+      },
+      "preview": "미리보기"
+    }
+  }
+}

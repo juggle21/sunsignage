@@ -1,0 +1,101 @@
+<div rv-spinner
+rv-spinner-key="registration-modal"
+rv-spinner-start-active="1">
+<div class="modal-header">
+  <button type="button" class="close registration-cancel-button" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">
+    <i class="fa fa-times"></i>
+  </button>
+  <h2 class="modal-title">상세 정보 입력</h2>
+</div>
+<div class="modal-body registration-modal" stop-event="touchend">
+  
+  <div class="row">
+    <div class="col-sm-8">
+
+      <form id="registrationForm" novalidate role="form" name="forms.registrationForm">
+        <!-- First Name -->
+        <div class="form-group" ng-class="{ 'has-error' : forms.registrationForm.firstName.$invalid && !forms.registrationForm.firstName.$pristine }">
+          <label for="firstName">성</label>
+          <input type="text" class="form-control firstName"
+          name="firstName"
+          id="firstName" required
+          ng-model="profile.firstName">
+          <p ng-show="forms.registrationForm.firstName.$invalid && !forms.registrationForm.firstName.$pristine"
+            class="help-block validation-error-message-first-name">성을 입력하세요.</p>
+        </div>
+        <!-- Last Name -->
+        <div class="form-group" ng-class="{ 'has-error' : forms.registrationForm.lastName.$invalid && !forms.registrationForm.lastName.$pristine }">
+          <label for="lastName">이름</label>
+          <input type="text" class="form-control lastName"
+          name="lastName"
+          id="lastName" required
+          ng-model="profile.lastName">
+          <p ng-show="forms.registrationForm.lastName.$invalid && !forms.registrationForm.lastName.$pristine"
+            class="help-block validation-error-message-last-name">이름을 입력하세요.</p>
+        </div>
+        <!-- Email -->
+        <div class="form-group" ng-class="{ 'has-error' : forms.registrationForm.email.$invalid && !forms.registrationForm.email.$pristine }">
+          <label for="email">이메일 <span>(우리는 당신에게 시스템 공지 사항 및 기타 중요한 정보를 보내드립니다.)</span></label>
+          <input type="email" class="form-control email"
+          name="email"
+          id="email" required
+          ng-model="profile.email">
+          <p ng-show="forms.registrationForm.email.$invalid && !forms.registrationForm.email.$pristine"
+            class="help-block validation-error-message-email">이메일을 입력하세요.</p>
+        </div>
+        <!-- Terms of Service and Privacy -->
+        <div class="checkbox form-group" ng-class="{ 'has-error' : forms.registrationForm.accepted.$invalid && !userForm.accepted.$pristine }">
+          <label>
+          <input type="checkbox" name="accepted"
+            ng-model="profile.accepted"
+            class="accept-terms-checkbox" required />
+          나는 서비스 및 개인정보 보호 약관에 동의합니다. <a href="http://www.risevision.com/terms-service-privacy/" target="_blank"></a>
+          <p ng-show="forms.registrationForm.accepted.$invalid && !forms.registrationForm.accepted.$pristine"
+            class="help-block validation-error-message-accepted">약관에 동의해 주십시요.</p>
+          </label>
+        </div>
+        <!-- Newsletter -->
+        <div class="checkbox form-group">
+          <label>
+            <input type="checkbox" class="sign-up-newsletter-checkbox" ng-model="profile.mailSyncEnabled"> 뉴스레터 가입
+          </label>
+        </div>
+        <div class="add-top">
+          <button ng-click="save()"
+            name="create-account"
+            type="button"
+            class="btn btn-lg btn-success btn-block registration-save-button"
+            ng-disabled="registering">
+            계정 생성 <i class="fa fa-white fa-check icon-right"></i>
+          </button>
+          <button type="button" class="btn hidden btn-lg btn-link btn-fixed-width"
+          ng-disabled="registering"
+          ng-click="closeModal()">
+            취소
+          </button>
+        </div>
+      </form>
+
+    </div>
+    <!--
+    <div class="col-sm-4">
+      <div class="signup-counters">
+        <div class="counter">
+          <p>129</p>
+          <span>New Companies Added Yesterday</span>
+        </div>
+        <div class="counter">
+          <p>72,990</p>
+          <span>Total Companies</span>
+        </div>
+        <div class="counter">
+          <p>120</p>
+          <span>Countries with Active Displays</span>
+        </div>
+      </div-->
+    </div>
+  </div>  
+
+  
+</div>
+</div>

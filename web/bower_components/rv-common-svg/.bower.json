@@ -1,0 +1,26 @@
+{
+  "name": "rv-common-svg",
+  "license": "GPL3",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "www"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0"
+  },
+  "homepage": "https://github.com/Rise-Vision/common-svg",
+  "_release": "eb48e3fa74",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "eb48e3fa741b868c845ce66a59ace8ffa6a01955"
+  },
+  "_source": "https://github.com/Rise-Vision/common-svg.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/common-svg.git"
+}

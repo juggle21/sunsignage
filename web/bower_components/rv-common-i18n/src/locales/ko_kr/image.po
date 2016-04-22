@@ -1,0 +1,24 @@
+msgid "auto-hide"
+msgstr "네비게이션 자동 숨김"
+
+msgid "duration.label"
+msgstr "이미지 노출 시간"
+
+msgid "errors.file-type"
+msgstr "올바른 이미지를 위한 URL을 입력하세요."
+
+msgid "pause.label"
+msgstr "If image is touched resume playing after"
+
+msgid "settings"
+msgstr "이미지 설정"
+
+msgid "url.file"
+msgstr "이미지 파일"
+
+msgid "url.folder"
+msgstr "이미지 폴더"
+
+msgid "url.label"
+msgstr "당신의 이미지를 보여지기 원합니까?"
+

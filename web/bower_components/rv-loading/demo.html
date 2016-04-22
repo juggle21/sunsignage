@@ -1,0 +1,93 @@
+<div class="page-header">
+  <h1 class="page">Loading Spinner</h1>
+</div>
+
+<p class="lead">The Rise Vision AngularJS spinner. Comes with a <code>$loading</code> service which can be used to configure/control the directive.</p>
+
+<p>
+  <strong>spin.js</strong>
+  <span class="label label-info">angular-spinner.js</span>
+  <span class="label label-info">loading.js</span>
+  <span class="label label-info">jQuery</span>
+</p>
+
+<!-- Dynamic Example -->
+
+<div class="row example">
+  <hljs include="'rv-loading-spinner'"></hljs>
+</div>
+
+<div style="height: 200px; position: relative; width: 100%; margin: 20px 0; padding: 20px;">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <ng-include src="'rv-loading-spinner'"></ng-include>
+</div>
+
+<div class="btn-group add-bottom">
+  <button class="btn btn-success" ng-click="startSpinner()">Start Spinner</button>
+  <button class="btn btn-danger" ng-click="stopSpinner()">Stop Spinner</button>
+</div>
+
+<!-- Script Includes -->
+<h3>Script Includes</h3>
+
+<hljs>
+bower_components/jquery/jquery.js
+bower_components/spin.js/spin.js
+bower_components/angular-spinner/angular-spinner.js
+bower_components/rv-loading/loading.js
+</hljs>
+
+<!-- Usage -->
+<h3>Usage</h3>
+<hljs>
+angular.module('myApp', [
+  'risevision.common.loading'
+])
+</hljs>
+
+<hljs>
+defaultSpinnerOptions = {
+  lines: 12, // The number of lines to draw
+  length: 20, // The length of each line
+  width: 10, // The line thickness
+  radius: 30, // The radius of the inner circle
+  corners: 1, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: "#555", // #rgb or #rrggbb or array of colors
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: "spinner", // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: "100%", // Top position relative to parent in px
+  left: "50%" // Left position relative to parent in px
+};
+</hljs>
+
+<h3>Available Methods</h3>
+<p>You can pass in one or multiple (as an array) <code>keys</code> and <code>promises</code></p>
+<hljs language="javascript" class="add-bottom">
+// start the loading spinner
+$loading.start("rv-loading-spinner-demo");
+
+// stop the loading spinner
+$loading.stop("rv-loading-spinner-demo");
+
+// start and then automatically stop spinner when promise resolved
+$loading.stopSpinnerAfterPromise("rv-loading-spinner-demo", promises);
+</hljs>
+
+<script type="text/ng-template" id="rv-loading-spinner">
+<div rv-spinner="defaultSpinnerOptions"
+     rv-spinner-key="rv-loading-spinner-demo"
+     rv-spinner-start-active="1"
+     rv-spinner-backdrop-class="spinner-backdrop"
+></div>
+</script>

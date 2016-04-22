@@ -1,0 +1,18 @@
+{
+  "auto-hide": "네비게이션 자동 숨기기",
+  "duration": "지속시간",
+  "order": {
+    "alpha-asc": "A to Z",
+    "alpha-desc": "Z to A",
+    "date-asc": "일자",
+    "date-desc": "일자",
+    "label": "순서",
+    "random": "랜덤"
+  },
+  "pause": {
+    "label": "일시정지",
+    "tooltip": "터치후 슬리이드쇼 되기까지 시간(초)"
+  },
+  "settings": "이미지 폴더 설정",
+  "storage-error": "스토리지에서 폴더를 선택해 주세요."
+}

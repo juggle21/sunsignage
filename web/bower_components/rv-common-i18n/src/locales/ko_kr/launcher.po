@@ -1,0 +1,12 @@
+msgid "createAccount"
+msgstr "무료 계정 생성"
+
+msgid "dontHaveAccount"
+msgstr "구글 계정 만들기"
+
+msgid "haveAccount"
+msgstr "계정이 있습니까?"
+
+msgid "signUpGoogle"
+msgstr "구글계정으로 회원 가입"
+

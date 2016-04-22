@@ -1,0 +1,36 @@
+msgid "choice"
+msgstr "이미지 사용"
+
+msgid "color.label"
+msgstr "색상"
+
+msgid "heading"
+msgstr "배경"
+
+msgid "image.position.label"
+msgstr "이미지 위치"
+
+msgid "image.repeat.both"
+msgstr "Both"
+
+msgid "image.repeat.horizontal"
+msgstr "수평"
+
+msgid "image.repeat.label"
+msgstr "이미지 반복"
+
+msgid "image.repeat.noRepeat"
+msgstr "없음"
+
+msgid "image.repeat.vertical"
+msgstr "수직"
+
+msgid "image.scale"
+msgstr "스케일 맞춤"
+
+msgid "image.selector.file"
+msgstr "스토리지"
+
+msgid "image.selector.title"
+msgstr "스토리지에서 이미지를 선택하거나 올바른 URL을 입력"
+

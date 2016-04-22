@@ -1,0 +1,198 @@
+msgid "add"
+msgstr "추가"
+
+msgid "apply"
+msgstr "적용"
+
+msgid "apr"
+msgstr "Apr"
+
+msgid "aug"
+msgstr "Aug"
+
+msgid "back"
+msgstr "뒤로"
+
+msgid "cancel"
+msgstr "취소"
+
+msgid "close"
+msgstr "닫기"
+
+msgid "completeRegistration"
+msgstr "등록 완료"
+
+msgid "contribute"
+msgstr "기부"
+
+msgid "create"
+msgstr "생성"
+
+msgid "dec"
+msgstr "12월"
+
+msgid "delete"
+msgstr "삭제"
+
+msgid "delete-forever"
+msgstr "완전 삭제"
+
+msgid "discard"
+msgstr "분리"
+
+msgid "edit"
+msgstr "편집"
+
+msgid "feb"
+msgstr "2월"
+
+msgid "file-date-mod"
+msgstr "수정일"
+
+msgid "file-name"
+msgstr "이름"
+
+msgid "file-size"
+msgstr "용량"
+
+msgid "file-type"
+msgstr "유형"
+
+msgid "folder"
+msgstr "폴더"
+
+msgid "font-variants.bold"
+msgstr "Bold"
+
+msgid "font-variants.italic"
+msgstr "Italic"
+
+msgid "font-variants.label"
+msgstr "Font Variants"
+
+msgid "friday"
+msgstr "금요일"
+
+msgid "help"
+msgstr "도움말"
+
+msgid "jan"
+msgstr "1월"
+
+msgid "jul"
+msgstr "6월"
+
+msgid "jun"
+msgstr "7월"
+
+msgid "last-modified.by"
+msgstr "by"
+
+msgid "last-modified.saved"
+msgstr "저장됨"
+
+msgid "logging-in"
+msgstr "로그인 중..."
+
+msgid "lremove"
+msgstr "제거"
+
+msgid "mar"
+msgstr "3월"
+
+msgid "may"
+msgstr "5월"
+
+msgid "monday"
+msgstr "월요일"
+
+msgid "nov"
+msgstr "11월"
+
+msgid "oct"
+msgstr "10월"
+
+msgid "ok"
+msgstr "Okay"
+
+msgid "previous-folder"
+msgstr "이전 폴더"
+
+msgid "publish"
+msgstr "완료"
+
+msgid "required-credentials"
+msgstr "사용자 인증을 위해 구글 계정 인증이 필요합니다."
+
+msgid "restore"
+msgstr "복구"
+
+msgid "safeDelete.message"
+msgstr "삭제 확인을 위해 DELETE 문자를 입력해 주세요!"
+
+msgid "safeDelete.title"
+msgstr "삭제 하시겠습니까?"
+
+msgid "saturday"
+msgstr "토요일"
+
+msgid "save"
+msgstr "저장"
+
+msgid "saving"
+msgstr "저장중"
+
+msgid "select"
+msgstr "선택"
+
+msgid "sep"
+msgstr "9월"
+
+msgid "signIn"
+msgstr "로그인"
+
+msgid "signInText"
+msgstr "이미 계정이 있다면."
+
+msgid "signOut"
+msgstr "로그 아웃"
+
+msgid "signUp"
+msgstr "회원가입"
+
+msgid "signUpText"
+msgstr "무료 가입"
+
+msgid "sunday"
+msgstr "일요일"
+
+msgid "thursday"
+msgstr "목요일"
+
+msgid "tuesday"
+msgstr "화요일"
+
+msgid "units.celsius"
+msgstr "Celsius"
+
+msgid "units.fahrenheit"
+msgstr "Fahrenheit"
+
+msgid "units.kph"
+msgstr "kph"
+
+msgid "units.minutes"
+msgstr "min"
+
+msgid "units.mph"
+msgstr "mph"
+
+msgid "units.pixels"
+msgstr "px"
+
+msgid "units.seconds"
+msgstr "sec"
+
+msgid "wednesday"
+msgstr "수요일"
+

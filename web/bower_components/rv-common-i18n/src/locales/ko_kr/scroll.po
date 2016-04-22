@@ -1,0 +1,45 @@
+msgid "by.continuous"
+msgstr "Continuously"
+
+msgid "by.label"
+msgstr "유형"
+
+msgid "by.none"
+msgstr "번호"
+
+msgid "by.page"
+msgstr "By Page"
+
+msgid "heading"
+msgstr "스크롤"
+
+msgid "pause.label"
+msgstr "일시멈춤"
+
+msgid "pause.tooltip"
+msgstr "Number of seconds to pause after touch or the end of the list is reached"
+
+msgid "pud.label"
+msgstr "PUD Failover"
+
+msgid "pud.tooltip"
+msgstr "Duration that the content should be shown for in the event of no scrolling or insufficient content to scroll"
+
+msgid "speed.fast"
+msgstr "빠르게"
+
+msgid "speed.fastest"
+msgstr "더 빠르게"
+
+msgid "speed.label"
+msgstr "속도"
+
+msgid "speed.medium"
+msgstr "보통"
+
+msgid "speed.slow"
+msgstr "느리게"
+
+msgid "speed.slowest"
+msgstr "더 느리게"
+

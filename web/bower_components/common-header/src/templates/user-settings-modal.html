@@ -1,0 +1,133 @@
+<div rv-spinner="spinnerOptions"
+rv-spinner-key="user-settings-modal"
+rv-spinner-start-active="1">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">
+    <i class="fa fa-times"></i>
+  </button>
+  <h2 id="user-settings-label" class="modal-title">
+  <span ng-if="!isAdd">사용자 설정</span>
+  <span ng-if="isAdd">사용자 추가</span>
+  </h2>
+</div>
+<div class="modal-body user-settings-modal" stop-event="touchend">
+  <form id="userSettingsForm" role="form" novalidate name="forms.userSettingsForm">
+    <div class="form-group"
+      ng-class="{ 'has-error' : forms.userSettingsForm.username.$invalid && !forms.userSettingsForm.username.$pristine }"
+    >
+      <label>
+        사용자 이름 *
+      </label>
+      <div ng-if="!isAdd">{{user.username}}</div>
+      <input id="user-settings-username"
+        type="email" required name="username"
+        class="form-control"
+        ng-if="isAdd"
+        ng-model="user.username"
+        />
+        <p ng-show="forms.userSettingsForm.username.$invalid && !forms.userSettingsForm.username.$pristine"
+          class="help-block validation-error-message-email">사용자 이름은 유효한 이메일 주소여야 합니다.</p>
+    </div>
+    <div class="form-group"
+      ng-class="{ 'has-error' : forms.userSettingsForm.firstName.$invalid && !forms.userSettingsForm.firstName.$pristine }">
+      <label for="user-settings-first-name">
+        성 *
+      </label>
+      <input id="user-settings-first-name"
+        type="text" required name="firstName"
+        class="form-control"
+        ng-model="user.firstName"
+        />
+        <p ng-show="forms.userSettingsForm.firstName.$invalid && !forms.userSettingsForm.firstName.$pristine"
+          class="help-block validation-error-message-firstName">성은 필수 항목입니다..</p>
+    </div>
+    <div class="form-group"
+      ng-class="{ 'has-error' : forms.userSettingsForm.lastName.$invalid && !forms.userSettingsForm.lastName.$pristine }">
+      <label for="user-settings-last-name">
+        이름 *
+      </label>
+      <input id="user-settings-last-name"
+        type="text" required name="lastName"
+        class="form-control"
+        ng-model="user.lastName"
+        />
+        <p ng-show="forms.userSettingsForm.lastName.$invalid && !forms.userSettingsForm.lastName.$pristine"
+          class="help-block validation-error-message-lastName">이름은 필수 항목입니다.</p>
+    </div>
+    <div class="form-group">
+      <label for="user-settings-phone">
+        연락처
+      </label>
+      <input
+        id="user-settings-phone"
+        type="tel"
+        name="phone"
+        class="form-control"
+        ng-model="user.telephone"
+         />
+    </div>
+    <div class="form-group"
+      ng-class="{ 'has-error' : forms.userSettingsForm.email.$invalid && !forms.userSettingsForm.email.$pristine }">
+      <label for="user-settings-email">
+        이메일 *
+      </label>
+      <input
+        id="user-settings-email"
+        type="email" required name="email"
+        class="form-control"
+        ng-model="user.email"
+        />
+        <p ng-show="forms.userSettingsForm.email.$invalid && !forms.userSettingsForm.email.$pristine"
+          class="help-block validation-error-message-email">유효한 이메일 주소 가 필요합니다.</p>
+    </div>
+    <div class="form-group">
+      <label>
+        권한
+      </label>
+      <div class="checkbox" ng-repeat="role in availableRoles"
+        ng-show="editRoleVisible(role)">
+        <label>
+          <input type="checkbox"
+            id="user-settings-{{role.key}}"
+            checklist-model="user.roles"
+            ng-disabled="!editRoleAllowed(role)"
+            checklist-value="role.key"> {{role.name}}
+        </label>
+      </div>
+    </div>
+    <div class="form-group" ng-if="user.lastLogin">
+      <label>
+        최종 로그인 일시
+      </label>
+      <div>{{user.lastLogin | date:'d-MMM-yyyy h:mm a'}}</div>
+    </div>
+    <div class="form-group" ng-if="!editingYourself && !isAdd">
+      <label for="user-settings-status">
+        상태
+      </label>
+      <select id="user-settings-status"
+        class="form-control selectpicker" ng-model="user.status">
+        <option value="1">활성</option>
+        <option value="0">비활성</option>
+      </select>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <p class="text-right"><last-modified change-date="user.changeDate" changed-by="user.changedBy"></last-modified></p>
+  <button type="button" id="delete-button" class="btn btn-danger btn-fixed-width pull-left"
+    ng-if="!isAdd" ng-click="deleteUser()">
+    삭제 <i class="fa fa-white fa-trash-o icon-right"></i>
+  </button>
+  <div class="pull-right">
+    <button type="button"
+      class="btn btn-primary btn-fixed-width"
+      data-dismiss="modal"
+      ng-click="save()" id="save-button">
+      저장 <i class="fa fa-white fa-check icon-right"></i>
+    </button>
+    <button type="button" class="btn btn-default btn-fixed-width" ng-click="closeModal()">
+      취소 <i class="fa fa-white fa-times icon-right"></i>
+    </button>
+  </div>
+</div>

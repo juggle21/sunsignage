@@ -1,0 +1,32 @@
+<div id="sendUsANoteModal">
+    <div class="modal-header">
+        <button id="sendUsANoteModalCloseButton" ng-click="dismiss()" type="button" class="close">
+            <i class="fa fa-times"></i>
+        </button>
+        <h2 class="modal-title"></h2>
+    </div>
+    <div class="modal-body text-center" stop-event="touchend">
+        <p class="lead"><strong>Something else in mind?</strong> Send us a note and we will typically get back to you next business day.</p>
+        <button class="btn btn-primary btn-lg" ng-click="sendUsANote()">
+            Send Us a Note
+        </button>
+
+        <div class="content-box add-top remove-bottom">
+          <div class="content-box-body">
+            <p class="lead add-left add-right">
+                <strong>Need help fast?</strong>
+                Check out Priority Support and have a response in <strong>10 minutes</strong>. We are online 8-5 CST Monday through Friday.
+            </p>
+            <button ng-if="subscriptionStatus.statusCode === 'trial-available'" class="btn btn-primary btn-lg" ng-click="startTrial()">
+                Start Your Free Trial
+            </button>
+
+            <a ng-if="!subscriptionStatus.statusCode || ['not-subscribed', 'trial-expired', 'cancelled', 'suspended'].indexOf(subscriptionStatus.statusCode) >= 0" class="btn btn-primary btn-lg" href="{{supportProductUrl}}" ng-click="dismiss();" target="_blank">
+                Subscribe Now
+            </a>
+            <button ng-if="['on-trial', 'subscribed'].indexOf(subscriptionStatus.statusCode) >= 0" class="btn btn-primary btn-lg" ng-click="prioritySupport()">
+                Use Priority Support
+            </button>
+      </div><!--content-box-body-->
+    </div>
+</div>

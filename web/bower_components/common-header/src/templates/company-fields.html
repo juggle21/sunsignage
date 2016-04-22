@@ -1,0 +1,83 @@
+<div class="form-group" ng-class="{'has-error': forms.companyForm.name.$invalid && !forms.companyForm.name.$pristine}">
+  <label for="company-settings-name">
+    회사명 *
+  </label>
+  <input required id="company-settings-name" type="text" class="form-control"
+    ng-model="company.name" name="name" />
+  <p ng-show="forms.companyForm.name.$invalid && !forms.companyForm.name.$pristine"
+    class="help-block validation-error-message-name">회사명은 필수 항목입니다.</p>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="company-settings-street" class="control-label">
+        거리
+      </label>
+      <input id="company-settings-street" type="text" class="form-control" ng-model="company.street" />
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="company-settings-unit" class="control-label">
+        Unit
+      </label>
+      <input id="company-settings-unit" type="text" class="form-control" ng-model="company.unit" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">      
+    <div class="form-group">
+      <label for="company-settings-city" class="control-label">
+        도시
+      </label>
+      <input id="company-settings-city" type="text" class="form-control" ng-model="company.city" />
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="company-settings-country" class="control-label">
+        국가
+      </label>
+      <select id="company-settings-country" class="form-control selectpicker"
+        ng-model="company.country" ng-options="c.code as c.name for c in countries" empty-select-parser>
+        <option ng-show="false" value="">&lt; 국가 선택 &gt;</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="company-settings-state" class="control-label">
+        주/지방/지역
+      </label>
+      <input id="company-settings-state" type="text" class="form-control" ng-model="company.province" ng-hide="company.country == 'US' || company.country == 'CA'" />
+      <select class="form-control selectpicker" ng-model="company.province" ng-options="c[1] as c[0] for c in regionsCA" ng-show="company.country == 'CA'" empty-select-parser>
+        <option ng-show="false" value="">&lt; 지방 선택 &gt;</option>
+      </select>
+      <select class="form-control selectpicker" ng-model="company.province" ng-options="c[1] as c[0] for c in regionsUS" ng-show="company.country == 'US'" empty-select-parser>
+        <option ng-show="false" value="">&lt; 주 선택 &gt;</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="company-settings-zip" class="control-label">
+        우편번호
+      </label>
+      <input id="company-settings-zip" type="text" class="form-control" ng-model="company.postalCode" />
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="company-settings-phone" class="control-label">
+    연락처
+  </label>
+  <input id="company-settings-phone" type="tel" class="form-control" ng-model="company.telephone"/>
+</div>
+<div class="form-group">
+  <label for="company-settings-timezone" class="control-label">시간 대역</label>
+  <select class="form-control" ng-model="company.timeZoneOffset" integer-parser>
+    <option ng-show="false" value="">&lt; 시간 대역 선택 &gt;</option>
+    <option value="{{c[1]}}" ng-repeat="c in timezones">{{c[0]}}</option>
+  </select>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "rv-loading",
+  "authors": [
+    "Steven Sherre (steve.sherrie@risevision.com)",
+    "Xiyang Chen (settinghead@gmail.com)"
+  ],
+  "description": "",
+  "dependencies": {
+    "angular-spinner": "~0.4.0",
+    "angular-mocks": "~1.2.24"
+  },
+  "devDependencies": {
+    "q": "1.0.1"
+  },
+  "version": "1.0",
+  "main": [
+    "loading.js",
+    "demo.html"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

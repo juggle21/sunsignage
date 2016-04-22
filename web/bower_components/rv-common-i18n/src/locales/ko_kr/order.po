@@ -1,0 +1,18 @@
+msgid "alpha-asc"
+msgstr "A to Z"
+
+msgid "alpha-desc"
+msgstr "Z to A"
+
+msgid "date-asc"
+msgstr "일자"
+
+msgid "date-desc"
+msgstr "일자"
+
+msgid "label"
+msgstr "순서"
+
+msgid "random"
+msgstr "랜덤"
+

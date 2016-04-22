@@ -1,0 +1,36 @@
+msgid "auto-hide"
+msgstr "네비게이션 자동 숨기기"
+
+msgid "duration"
+msgstr "지속시간"
+
+msgid "order.alpha-asc"
+msgstr "A to Z"
+
+msgid "order.alpha-desc"
+msgstr "Z to A"
+
+msgid "order.date-asc"
+msgstr "일자"
+
+msgid "order.date-desc"
+msgstr "일자"
+
+msgid "order.label"
+msgstr "순서"
+
+msgid "order.random"
+msgstr "랜덤"
+
+msgid "pause.label"
+msgstr "일시정지"
+
+msgid "pause.tooltip"
+msgstr "터치후 슬리이드쇼 되기까지 시간(초)"
+
+msgid "settings"
+msgstr "이미지 폴더 설정"
+
+msgid "storage-error"
+msgstr "스토리지에서 폴더를 선택해 주세요."
+

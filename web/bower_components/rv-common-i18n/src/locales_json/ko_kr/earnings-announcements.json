@@ -1,0 +1,34 @@
+{
+  "announcements": {
+    "label": "공지사항",
+    "options": {
+      "today": "오늘",
+      "tomorrow": "내일",
+      "yesterday": "어제"
+    }
+  },
+  "columns": {
+    "error": {
+      "required": "필수 입력"
+    },
+    "label": "컬럼",
+    "options": {
+      "actualEPS": "실제 실적",
+      "actualRevenue": "실제 수익",
+      "announcementPeriod": "분기 발표",
+      "companyName": "회사명",
+      "consensusEPS": "예측 실적",
+      "consensusRevenue": "예측 수익",
+      "symbol": "Ticker Symbol"
+    }
+  },
+  "markets": {
+    "label": "Markets",
+    "options": {
+      "all": "All (includes London)",
+      "canada": "Canada",
+      "usa": "USA"
+    }
+  },
+  "settings": "실적 공지사항 설정"
+}

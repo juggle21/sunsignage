@@ -1,0 +1,39 @@
+{
+  "name": "rv-loading",
+  "version": "1.0.0",
+  "description": "Rise Vision AngularJS Loading Spinner",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-autoprefixer": "~0.0.6",
+    "gulp": "~3.8.7",
+    "gulp-clean": "~0.2.4",
+    "gulp-jshint": "~1.5.5",
+    "gulp-livereload": "~1.2.0",
+    "gulp-watch": "~0.6.4",
+    "karma": "~0.12",
+    "gulp-karma": "~0.0.4",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-jasmine": "~0.2.2",
+    "karma-mocha": "~0.1.3",
+    "karma-chai": "~0.1.0",
+    "chai": "~1.9.1",
+    "chai-as-promised": "~4.1.1",
+    "karma-chai-plugins": "~0.2.1",
+    "karma-junit-reporter": "~0.2.2",
+    "karma-coverage": "~0.2.1",
+    "gulp-connect": "~2.0.5",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-firefox-launcher": "~0.1.3",
+    "widget-tester": "git://github.com/Rise-Vision/widget-tester.git"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "dev-install": "npm install && bower install",
+    "dev": "gulp server"
+  },
+  "author": "Rise",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint-stylish": "^0.2.0"
+  }
+}

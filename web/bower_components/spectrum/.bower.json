@@ -1,0 +1,34 @@
+{
+  "name": "rv-spectrum",
+  "version": "1.3.9",
+  "main": [
+    "./spectrum.css",
+    "./spectrum.js"
+  ],
+  "docs": "http://bgrins.github.com/spectrum",
+  "homepage": "http://bgrins.github.com/spectrum",
+  "demo": "http://jsfiddle.net/bgrins/ctkY3/",
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  },
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "build/",
+    "docs/",
+    "example/",
+    "Gruntfile.js",
+    "LICENSE",
+    "README.md",
+    "test/"
+  ],
+  "_release": "1.3.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.3.9",
+    "commit": "8ebadce19de9c6a657e148b9c92d58a6e0b16706"
+  },
+  "_source": "https://github.com/Rise-Vision/spectrum.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/spectrum.git"
+}

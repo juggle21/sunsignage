@@ -1,0 +1,111 @@
+msgid "actions.new"
+msgstr "스케줄 추가"
+
+msgid "actions.preview"
+msgstr "미리보기"
+
+msgid "add.error"
+msgstr "스케줄 생성을 실패 하였습니다.!"
+
+msgid "details.deleteTitle"
+msgstr "스케줄 삭제중"
+
+msgid "details.deleteWarning"
+msgstr "선택한 스케줄을 삭제 하시겠습니까?"
+
+msgid "details.error"
+msgstr "스케줄 수정을 실패 하였습니다.!"
+
+msgid "details.unsavedTitle"
+msgstr "변경됨"
+
+msgid "details.unsavedWarning"
+msgstr "변경 내역이 있습니다. 저장하시겠습니까?"
+
+msgid "fields.name.name"
+msgstr "이름"
+
+msgid "fields.name.placeholder"
+msgstr "스케줄명"
+
+msgid "fields.name.required"
+msgstr "필수 항목"
+
+msgid "fields.timeline"
+msgstr "타임라인"
+
+msgid "landing.manageSchedulesText"
+msgstr "언제 어디서든 당신의 디지털 사이니지 디스플레이에 HTML 컨텐츠 전송을 스케줄링 할 수 있습니다."
+
+msgid "list.empty"
+msgstr "생성된 스케줄이 없습니다."
+
+msgid "list.error"
+msgstr "스케줄 가져오기를 실패 하였습니다. 나중에 다시 시도 하십시요."
+
+msgid "list.filter.filters"
+msgstr "필터"
+
+msgid "list.filter.placeholder"
+msgstr "스케줄 검색"
+
+msgid "list.heading.changeDate"
+msgstr "최종 수정일"
+
+msgid "list.heading.name"
+msgstr "이름"
+
+msgid "list.no-results"
+msgstr "검색 결과가 없습니다."
+
+msgid "playlist.add-playlist-item"
+msgstr "스크린 추가"
+
+msgid "playlist.empty"
+msgstr "등록된 아이템이 없습니다."
+
+msgid "playlist.item.distribution"
+msgstr "배포"
+
+msgid "playlist.item.duration"
+msgstr "지속시간 (초)"
+
+msgid "playlist.item.name"
+msgstr "이름"
+
+msgid "playlist.item.presentation"
+msgstr "스크린"
+
+msgid "playlist.item.required"
+msgstr "필수 항목"
+
+msgid "playlist.item.title"
+msgstr "스크린"
+
+msgid "playlist.item.url"
+msgstr "URL"
+
+msgid "playlist.title"
+msgstr "스크린 목록"
+
+msgid "presentation-modal.presentation-list.heading.name"
+msgstr "이름"
+
+msgid "presentation-modal.presentation-list.heading.status"
+msgstr "상태"
+
+msgid "presentation-modal.presentation-list.status.published"
+msgstr "Published(완료)"
+
+msgid "presentation-modal.presentation-list.status.revised"
+msgstr "Revised(미완료)"
+
+msgid "presentation-modal.search.placeholder"
+msgstr "스크린 검색"
+
+msgid "presentation-modal.title"
+msgstr "스크린 선택"
+
+msgid "title"
+msgstr "스케줄"
+

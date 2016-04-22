@@ -1,0 +1,61 @@
+<div id="prioritySupportModal">
+    <div class="modal-header">
+        <button id="prioritySupportModalCloseButton" ng-click="dismiss()" type="button" class="close">
+            <i class="fa fa-times"></i>
+        </button>
+        <h2 class="modal-title">Priority Support</h2>
+    </div>
+    <div class="modal-body" stop-event="touchend">
+
+        <div class="add-bottom blank-state">
+            <div class="product-graphic" ng-show="['trial-available', 'not-subscribed'].indexOf(subscriptionStatus.statusCode) >= 0">
+                <img itemprop="image" class="img-responsive" src="https://s3.amazonaws.com/Store-Products/Rise-Vision/support_image.png">
+            </div>
+
+            <div ng-show="['on-trial', 'trial-expired', 'cancelled', 'suspended'].indexOf(subscriptionStatus.statusCode) >= 0">
+
+                <p class="lead">
+                <strong>Need help fast?</strong>
+                Check out Priority Support and have a response in <strong>10 minutes</strong>. We are online 8-5 CST Monday through Friday.
+                </p>
+
+                <div ng-show="subscriptionStatus.statusCode === 'on-trial'" class="subscription-status trial">
+                    <span  ng-bind-html="'subscription-status.expanded-' + subscriptionStatus.statusCode + subscriptionStatus.plural | translate:subscriptionStatus | to_trusted"></span>
+                    <a class="btn btn-primary add-left" href="{{supportProductUrl}}" ng-click="dismiss()" target="_blank">
+                        <span>Subscribe Now!</span>
+                    </a>
+                </div>
+                <div ng-show="subscriptionStatus.statusCode === 'trial-expired'" class="subscription-status expired">
+                    <span translate="subscription-status.expanded-expired"></span>
+                    <a class="btn btn-primary add-left" href="{{supportProductUrl}}" ng-click="dismiss()" target="_blank">
+                        <span>Subscribe Now!</span>
+                    </a>
+                </div>
+                <div ng-show="subscriptionStatus.statusCode === 'cancelled'" class="subscription-status cancelled">
+                    <span translate="subscription-status.expanded-cancelled"></span>
+                    <a class="btn btn-primary add-left" href="{{supportProductUrl}}" ng-click="dismiss()" target="_blank">
+                        <span>Subscribe Now!</span>
+                    </a>
+                </div>
+                <div ng-show="subscriptionStatus.statusCode === 'suspended'" class="subscription-status suspended">
+                    <span translate="subscription-status.expanded-suspended"></span>
+                    <a class="btn btn-primary add-left" href="{{supportProductUrl}}" ng-click="dismiss()" target="_blank">
+                        <span>Subscribe Now!</span>
+                    </a>
+                </div>
+            </div><!--content-box-body-->
+
+            <div class="content-box-body" ng-show="['trial-available', 'not-subscribed'].indexOf(subscriptionStatus.statusCode) >= 0">
+                <div class="product-intro">
+                    <h1>Priority Support</h1>
+                    <p class="lead">Get the help you need in 10 minutes or less, 8-5 CST Monday through Friday, or let us remotely connect, diagnose and correct display problems all without the need for you to intervene!</p>
+                    <p class="lead">$75 per Company per Month.</p>
+                    <button ng-show="subscriptionStatus.statusCode === 'trial-available'" type="button" class="btn btn-hg btn-primary" ng-click="startTrial()">Start Your Free Trial</button>
+                    <a ng-show="['not-subscribed'].indexOf(subscriptionStatus.statusCode) >= 0" class="btn btn-hg btn-primary" href="{{supportProductUrl}}" ng-click="dismiss()" target="_blank">
+                        <span>Subscribe Now!</span>
+                    </a>
+                </div>
+            </div>
+        </div><!--blank-state-->
+    </div>
+</div>

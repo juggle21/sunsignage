@@ -1,0 +1,26 @@
+{
+  "interactive": {
+    "label": "Interactive",
+    "tooltip": "Enable to allow users to interact with webpage."
+  },
+  "refresh": {
+    "label": "데이터 갱신 주기 (분)",
+    "none": "Do Not Refresh"
+  },
+  "scroll": {
+    "horizontal": {
+      "label": "수평 스크롤",
+      "tooltip": "Enter amount you want clipped from the leftmost portion of the webpage."
+    },
+    "vertical": {
+      "label": "수직 스크롤",
+      "tooltip": "Enter amount you want clipped from the topmost portion of the webpage."
+    }
+  },
+  "scrollbars": "스크롤바 활성화",
+  "settings": "웹 페이지 셋팅",
+  "zoom": {
+    "label": "확대",
+    "tooltip": "This will allow you to zoom in/out of a web page. If value is higher than 100% then scrollbars will be disabled."
+  }
+}

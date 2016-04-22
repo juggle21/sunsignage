@@ -1,0 +1,351 @@
+msgid "add.error"
+msgstr "스크린 생성에 실패 하였습니다.!"
+
+msgid "addWidget.settingsUrl"
+msgstr "URL 설정"
+
+msgid "addWidget.title"
+msgstr "URL로 위젯 추가"
+
+msgid "addWidget.url"
+msgstr "URL"
+
+msgid "details.deleteTitle"
+msgstr "스크린 삭제중"
+
+msgid "details.deleteWarning"
+msgstr "스크린을 삭제 하시겠습니까?"
+
+msgid "details.error"
+msgstr "스크린 수정을 실패하였습니다.!"
+
+msgid "details.published"
+msgstr "완료"
+
+msgid "details.remove"
+msgstr "삭제"
+
+msgid "details.removePlaceholder"
+msgstr "플레이리스트 삭제"
+
+msgid "details.removePlaceholderWarning"
+msgstr "스크린에서 플레이리스트를 삭제 하시겠습니까?"
+
+msgid "details.removePlaylistItem"
+msgstr "아이템 삭제"
+
+msgid "details.removePlaylistItemWarning"
+msgstr "선택한 컨텐츠를 플레이리스트에서 삭제 하시겠습니까?"
+
+msgid "details.revised"
+msgstr "완료전"
+
+msgid "details.saved"
+msgstr "저장"
+
+msgid "details.unsavedTitle"
+msgstr "변경됨"
+
+msgid "details.unsavedWarning"
+msgstr "변경 내역이 있습니다. 저장하시겠습니까?"
+
+msgid "goToStore.message"
+msgstr "프리미엄 템플릿 구매로 보다 다양한 템플릿을 보실 수 있습니다."
+
+msgid "goToStore.purchase"
+msgstr "스토어에서 구매"
+
+msgid "goToStore.title"
+msgstr "프리미엄 템플릿"
+
+msgid "goToStore.view"
+msgstr "스토어 보기"
+
+msgid "landing.manageEditorText"
+msgstr "언제 어디서든 당신의 디시털 사이니지에 보여줄 HTML 컨텐츠를 제작 및 관리 할 수 있습니다."
+
+msgid "list.actions.add"
+msgstr "스크린 추가"
+
+msgid "list.actions.fromTemplate"
+msgstr "From 템플릿"
+
+msgid "list.actions.new"
+msgstr "신규"
+
+msgid "list.empty"
+msgstr "생성된 스크린이 없습니다."
+
+msgid "list.error"
+msgstr "스크린 가져오기를 실패 하였습니다. 나중에 다시 시도 하십시요."
+
+msgid "list.filter.filters"
+msgstr "필터"
+
+msgid "list.filter.placeholder"
+msgstr "스크린 검색"
+
+msgid "list.heading.changeDate"
+msgstr "최종 수정일"
+
+msgid "list.heading.name"
+msgstr "이름"
+
+msgid "list.heading.status"
+msgstr "상태"
+
+msgid "list.no-results"
+msgstr "검색 결과가 없습니다."
+
+msgid "list.title"
+msgstr "스크린"
+
+msgid "playlistItem.add"
+msgstr "컨텐츠 추가"
+
+msgid "playlistItem.content"
+msgstr "컨텐츠"
+
+msgid "playlistItem.duration"
+msgstr "반복"
+
+msgid "playlistItem.legacyWarningPart1"
+msgstr "This is a Gadget and it is not supported in this Editor. To configure a Gadget please use the"
+
+msgid "playlistItem.legacyWarningPart2"
+msgstr "이전 버전"
+
+msgid "playlistItem.legacyWarningPart3"
+msgstr "of the Editor."
+
+msgid "playlistItem.name"
+msgstr "컨텐츠명"
+
+msgid "playlistItem.no-playlistItem"
+msgstr "컨텐츠 없음"
+
+msgid "playlistItem.playUntilDone"
+msgstr "종료될 때까지 재생"
+
+msgid "playlistItem.presentation"
+msgstr "스크린"
+
+msgid "playlistItem.required"
+msgstr "필수 항목"
+
+msgid "playlistItem.seconds"
+msgstr "초"
+
+msgid "playlistItem.select"
+msgstr "선택"
+
+msgid "playlistItem.title"
+msgstr "컨텐츠 편집"
+
+msgid "properties.labels.background"
+msgstr "배경"
+
+msgid "properties.labels.copy"
+msgstr "스크린 복사"
+
+msgid "properties.labels.height"
+msgstr "높이"
+
+msgid "properties.labels.hideMouse"
+msgstr "마우스 포인터 숨기기"
+
+msgid "properties.labels.id"
+msgstr "ID"
+
+msgid "properties.labels.isStoreProduct"
+msgstr "이 스크린은 스토어 상품입니다."
+
+msgid "properties.labels.name"
+msgstr "이름"
+
+msgid "properties.labels.playUntilDone"
+msgstr "종료 될 때까지 재생"
+
+msgid "properties.labels.resolution"
+msgstr "해상도"
+
+msgid "properties.labels.shareAsTemplate"
+msgstr "스크린을 당신의 관리 회사와 템플릿으로 공유 합니다."
+
+msgid "properties.labels.width"
+msgstr "넓이"
+
+msgid "properties.title"
+msgstr "스크린 속성"
+
+msgid "properties.transition.fade"
+msgstr "Fade"
+
+msgid "properties.transition.label"
+msgstr "Transition"
+
+msgid "properties.transition.none"
+msgstr "없음"
+
+msgid "properties.transition.slideDown"
+msgstr "아래로 슬라이드"
+
+msgid "properties.transition.slideLeft"
+msgstr "왼쪽으로 슬라이드"
+
+msgid "properties.transition.slideRight"
+msgstr "오른쪽으로 슬라이드"
+
+msgid "properties.transition.slideUp"
+msgstr "위로 슬라이드"
+
+msgid "properties.warnings.duplicate"
+msgstr "플레이리스트 이름의 중복을 허용하지 않습니다."
+
+msgid "properties.warnings.invalid"
+msgstr "플레이리스트 이름이 올바르지 않습니다."
+
+msgid "properties.warnings.invalidUrl"
+msgstr "URL이 올바르지 않습니다"
+
+msgid "properties.warnings.required"
+msgstr "필수입력항목입니다."
+
+msgid "sharedTemplates.name"
+msgstr "템플릿명"
+
+msgid "sharedTemplates.preview"
+msgstr "미리보기"
+
+msgid "sharedTemplates.search"
+msgstr "템플릿검색"
+
+msgid "sharedTemplates.title"
+msgstr "템플릿"
+
+msgid "storeProduct.add"
+msgstr "추가"
+
+msgid "storeProduct.content.search"
+msgstr "컨텐츠 검색"
+
+msgid "storeProduct.content.title"
+msgstr "컨텐츠 추가"
+
+msgid "storeProduct.details"
+msgstr "상세"
+
+msgid "storeProduct.productTags.all"
+msgstr "전체"
+
+msgid "storeProduct.productTags.business"
+msgstr "비즈니스"
+
+msgid "storeProduct.productTags.education"
+msgstr "교육"
+
+msgid "storeProduct.productTags.healthcare"
+msgstr "헬스케어"
+
+msgid "storeProduct.productTags.hospitality"
+msgstr "병원"
+
+msgid "storeProduct.productTags.lifestyle"
+msgstr "생활"
+
+msgid "storeProduct.productTags.other"
+msgstr "기타"
+
+msgid "storeProduct.productTags.retail"
+msgstr "소매점"
+
+msgid "storeProduct.productTags.worship"
+msgstr "예배"
+
+msgid "storeProduct.templates.blank"
+msgstr "공백"
+
+msgid "storeProduct.templates.cantFind"
+msgstr "원하는 템플릿이 없습니까?"
+
+msgid "storeProduct.templates.search"
+msgstr "템플릿 검색"
+
+msgid "storeProduct.templates.suggest"
+msgstr "템플릿을 제한하세요!"
+
+msgid "storeProduct.templates.title"
+msgstr "신규 스크린 추가"
+
+msgid "subscription.buy"
+msgstr "구매"
+
+msgid "subscription.status.daysRemaining"
+msgstr "남은 일자"
+
+msgid "subscription.status.daysTrial"
+msgstr "무료 일자"
+
+msgid "subscription.status.premium"
+msgstr "프리미엄"
+
+msgid "subscription.viewAccount"
+msgstr "계정 보기"
+
+msgid "title"
+msgstr "편집기"
+
+msgid "workspace.legacyWarning.confirmation"
+msgstr "클래식 편집기 열기"
+
+msgid "workspace.legacyWarning.message"
+msgstr "This Presentation contains Gadgets, Video Items, Image Items, HTML Items, Text Items or Presentation Items that are not supported in this Editor.<br/>To modify this Presentation please use the previous version of the Editor."
+
+msgid "workspace.legacyWarning.title"
+msgstr "사용 정지 예정 항목"
+
+msgid "workspace.sidebar.edit.playlist"
+msgstr "컨텐츠 목록"
+
+msgid "workspace.sidebar.edit.properties"
+msgstr "속성"
+
+msgid "workspace.sidebar.edit.settings.height"
+msgstr "높이"
+
+msgid "workspace.sidebar.edit.settings.left"
+msgstr "왼쪽위치"
+
+msgid "workspace.sidebar.edit.settings.top"
+msgstr "상단위치"
+
+msgid "workspace.sidebar.edit.settings.visible"
+msgstr "보이기"
+
+msgid "workspace.sidebar.edit.settings.width"
+msgstr "넓이"
+
+msgid "workspace.sidebar.edit.settings.zOrder"
+msgstr "우선 순위"
+
+msgid "workspace.sidebar.edit.title"
+msgstr "플레이리스트 편집"
+
+msgid "workspace.sidebar.no-placeholder"
+msgstr "등록된 플레이리스트가 없습니다."
+
+msgid "workspace.sidebar.title"
+msgstr "플레이리스트"
+
+msgid "workspace.toolbar.addPlaceholder"
+msgstr "플레이리스트 추가"
+
+msgid "workspace.toolbar.mode.design"
+msgstr "디자인"
+
+msgid "workspace.toolbar.mode.html"
+msgstr "HTML"
+
+msgid "workspace.toolbar.preview"
+msgstr "미리보기"
+

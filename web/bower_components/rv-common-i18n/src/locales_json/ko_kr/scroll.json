@@ -1,0 +1,25 @@
+{
+  "by": {
+    "continuous": "Continuously",
+    "label": "유형",
+    "none": "번호",
+    "page": "By Page"
+  },
+  "heading": "스크롤",
+  "pause": {
+    "label": "일시멈춤",
+    "tooltip": "Number of seconds to pause after touch or the end of the list is reached"
+  },
+  "pud": {
+    "label": "PUD Failover",
+    "tooltip": "Duration that the content should be shown for in the event of no scrolling or insufficient content to scroll"
+  },
+  "speed": {
+    "fast": "빠르게",
+    "fastest": "더 빠르게",
+    "label": "속도",
+    "medium": "보통",
+    "slow": "느리게",
+    "slowest": "더 느리게"
+  }
+}

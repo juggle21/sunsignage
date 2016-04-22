@@ -1,0 +1,36 @@
+msgid "interactive.label"
+msgstr "Interactive"
+
+msgid "interactive.tooltip"
+msgstr "Enable to allow users to interact with webpage."
+
+msgid "refresh.label"
+msgstr "데이터 갱신 주기 (분)"
+
+msgid "refresh.none"
+msgstr "Do Not Refresh"
+
+msgid "scroll.horizontal.label"
+msgstr "수평 스크롤"
+
+msgid "scroll.horizontal.tooltip"
+msgstr "Enter amount you want clipped from the leftmost portion of the webpage."
+
+msgid "scroll.vertical.label"
+msgstr "수직 스크롤"
+
+msgid "scroll.vertical.tooltip"
+msgstr "Enter amount you want clipped from the topmost portion of the webpage."
+
+msgid "scrollbars"
+msgstr "스크롤바 활성화"
+
+msgid "settings"
+msgstr "웹 페이지 셋팅"
+
+msgid "zoom.label"
+msgstr "확대"
+
+msgid "zoom.tooltip"
+msgstr "This will allow you to zoom in/out of a web page. If value is higher than 100% then scrollbars will be disabled."
+

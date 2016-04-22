@@ -1,0 +1,22 @@
+{
+  "name": "rv-bootstrap-formhelpers",
+  "version": "2.3.5-rv",
+  "homepage": "http://bootstrapformhelpers.com",
+  "authors": [
+    "Vincent Lamanna <v@cakemail.com>",
+    "Xiyang Chen <settinghead@gmail.com>"
+  ],
+  "description": "A collection of jQuery plugins for Bootstrap.",
+  "dependencies": {
+    "common-style": "https://github.com/Rise-Vision/common-style.git"
+  },
+  "_release": "2.3.5-rv",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.3.5-rv",
+    "commit": "082e072fb5a56cc734c701909015d58f38d1fcd8"
+  },
+  "_source": "https://github.com/Rise-Vision/BootstrapFormHelpers.git",
+  "_target": "2.3.5-rv",
+  "_originalSource": "https://github.com/Rise-Vision/BootstrapFormHelpers.git"
+}
