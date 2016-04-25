@@ -1,0 +1,49 @@
+{
+  "name": "widget-settings-ui-components",
+  "version": "1.0.4",
+  "description": "Various UI components shared across Angular-based widget settings",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rise-Vision/widget-settings-ui-components.git"
+  },
+  "contributors": [
+    "Alex Deaconu",
+    "Stuart Lees",
+    "Xiyang Chen",
+    "Donna Peplinskie"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Rise-Vision/widget-settings-ui-components/issues"
+  },
+  "dependencies": {
+    "bower": "^1.5.3"
+  },
+  "devDependencies": {
+    "chai": "~1.9.2",
+    "chai-as-promised": "~4.1.1",
+    "colors": "~1.0.3",
+    "del": "~1.1.1",
+    "event-stream": "^3.1.5",
+    "gulp": "~3.8.3",
+    "gulp-bower": "~0.0.10",
+    "gulp-bump": "~0.1.8",
+    "gulp-concat": "^2.2.0",
+    "gulp-html2js": "^0.2.0",
+    "gulp-html2string": "git://github.com/Rise-Vision/gulp-html2string",
+    "gulp-jshint": "~1.5.5",
+    "gulp-rename": "~1.2.0",
+    "run-sequence": "^0.3.2",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "~2.2.17",
+    "gulp-watch": "^0.6.8",
+    "jshint-stylish": "^0.2.0",
+    "widget-tester": "git://github.com/Rise-Vision/widget-tester.git"
+  },
+  "homepage": "https://github.com/Rise-Vision/widget-settings-ui-components"
+}

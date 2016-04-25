@@ -1,0 +1,44 @@
+{
+  "name": "widget-settings-ui-core",
+  "version": "0.4.2",
+  "homepage": "https://github.com/Rise-Vision/widget-settings-ui-core",
+  "authors": [
+    "Xiyang Chen <settinghead@gmail.com>"
+  ],
+  "description": "Common components shared across Rise Vision widget settings UI",
+  "keywords": [
+    "rise-vision",
+    "settings",
+    "widget",
+    "ui"
+  ],
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "1.2.18",
+    "angular-load": "~0.4.1",
+    "q": "1.0.1",
+    "jquery": "1.11.0",
+    "sinon": "~1.10.2"
+  },
+  "dependencies": {
+    "angular": "1.2.18",
+    "angular-mocks": "1.2.18"
+  },
+  "_release": "0.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.2",
+    "commit": "15c84f6143ddb9325bf6bef2cfddf151d0ff71c6"
+  },
+  "_source": "https://github.com/Rise-Vision/widget-settings-ui-core.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/widget-settings-ui-core.git"
+}

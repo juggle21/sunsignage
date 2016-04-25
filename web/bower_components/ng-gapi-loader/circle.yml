@@ -1,0 +1,5 @@
+---
+# Custom dependencies
+dependencies:
+  post:
+    - bower install

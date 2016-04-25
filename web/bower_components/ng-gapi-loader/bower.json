@@ -1,0 +1,33 @@
+{
+  "name": "ng-gapi-loader",
+  "version": "1.1.0",
+  "description": "AngularJS module with helper methods that load Google Client library & custom API's",
+  "keywords": [
+    "angularjs",
+    "gapi",
+    "loader",
+    "rise",
+    "vision",
+    "api"
+  ],
+  "authors": [
+    "Xiyang Chen <settinghead@gmail.com>"
+  ],
+  "license": "GNU GPL",
+  "homepage": "https://github.com/Rise-Vision/ng-gapi-loader",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.24",
+    "angular-mocks": "1.2.24"
+  },
+  "devDependencies": {
+    "q": "1.0.1"
+  }
+}

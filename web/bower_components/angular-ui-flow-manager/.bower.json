@@ -1,0 +1,43 @@
+{
+  "name": "angular-ui-flow-manager",
+  "homepage": "https://github.com/Rise-Vision/angular-ui-flow-manager",
+  "description": "AngularJS module that manages complex UI state dependencies and transitions.",
+  "keywords": [
+    "ui",
+    "flow",
+    "control",
+    "manager",
+    "angular",
+    "state"
+  ],
+  "authors": [
+    "Xiyang Chen <settinghead@gmail.com>"
+  ],
+  "dependencies": {
+    "ng-gapi-loader": "git://github.com/Rise-Vision/ng-gapi-loader.git",
+    "angular": "~1.2.24",
+    "angular-local-storage": "~0.1.4"
+  },
+  "devDependencies": {
+    "q": "1.0.1",
+    "angular-mocks": "1.2.24"
+  },
+  "license": "GNU GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "c9c271d780",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c9c271d780b9edef74cf8f89da4674852d5671b1"
+  },
+  "_source": "https://github.com/Rise-Vision/angular-ui-flow-manager.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/angular-ui-flow-manager.git"
+}

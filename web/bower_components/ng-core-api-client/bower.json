@@ -1,0 +1,33 @@
+{
+  "name": "ng-core-api-client",
+  "version": "1.0.0",
+  "description": "Client JS library module for Rise Vision Core API, Angular style.",
+  "keywords": [
+    "AngularJS",
+    "rise",
+    "vision",
+    "core",
+    "api"
+  ],
+  "dependencies": {
+    "ng-gapi-loader": "git://github.com/Rise-Vision/ng-gapi-loader.git",
+    "angular": "1.2.24"
+  },
+  "devDependencies": {
+      "q": "1.0.1",
+      "angular-mocks": "1.2.24"
+  },
+  "authors": [
+    "Xiyang Chen <settinghead@gmail.com>"
+  ],
+  "license": "GNU GPL",
+  "homepage": "https://github.com/Rise-Vision/ng-core-api-client",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
