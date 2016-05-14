@@ -25,15 +25,12 @@
 	// set up ========================
 	var express  = require('express');
 	var app      = express(); 								// create our app w/ express
-	//var mongoose = require('mongoose'); 					// mongoose for mongodb
-	var morgan = require('morgan'); 			// log requests to the console (express4)
-	var bodyParser = require('body-parser'); 	// pull information from HTML POST (express4)
-	var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
+	var mongoose = require('mongoose'); 					// mongoose for mongodb
+	var morgan = require('morgan'); 			            // log requests to the console (express4)
+	var bodyParser = require('body-parser'); 	            // pull information from HTML POST (express4)
+	var methodOverride = require('method-override');        // simulate DELETE and PUT (express4)
 	var argv = require('optimist').argv;
 
-	var MongoClient = require('mongodb').MongoClient;
-	var dbUrl = 'mongodb://104.199.153.122:80/sunsignage_cms';
-	
 	// configuration =================
 	//mongoose.connect('mongodb://104.199.153.122:80/sunsignage_cms');
    	app.use(express.static(__dirname + '/dist'));
@@ -43,80 +40,143 @@
 	app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 	app.use(methodOverride());
 
-	// routes ======================================================================
 
-	// screen api ---------------------------------------------------------------------
-	app.get('/user/screens/:email', function(req, res) {
-	  console.log("req------>", req.params);
-	  //Todo 1: collection data check & edit
-	  MongoClient.connect(dbUrl, function(err, db) {
-		var col = db.collection('TN_CMS_USER_SCREEN');
-		col.find({email: req.params.email}).toArray(function(err, items) {
-		  if(err) { res.send(err); }
-		  console.log('mongodb---->', items);
-   		  res.json(items);
-		  db.close();
-		});
-      });	
-	});
-
-	/* create todo and send back all todos after creation
-	app.post('/api/todos', function(req, res) {
-
-		// create a todo, information comes from AJAX request from Angular
-		Todo.create({
-			title : req.body.title,
-			completed : false
-		}, function(err, todo) {
-			if (err)
-				res.send(err);
-
-			// get and return all the todos after you create another
-			Todo.find(function(err, todos) {
-				if (err)
-					res.send(err)
-				res.json(todos);
-			});
-		});
-
-	});
-
-	app.put('/api/todos/:todo_id', function(req, res){
-	  return Todo.findById(req.params.todo_id, function(err, todo) {
-	    todo.title = req.body.title;
-	    todo.completed = req.body.completed;
-	    return todo.save(function(err) {
-	      if (err) {
-	        res.send(err);
-	      }
-	      return res.send(todo);
-	    });
-	  });
-	});
-
-	// delete a todo
-	app.delete('/api/todos/:todo_id', function(req, res) {
-		Todo.remove({
-			_id : req.params.todo_id
-		}, function(err, todo) {
-			if (err)
-				res.send(err);
-
-			// get and return all the todos after you create another
-			Todo.find(function(err, todos) {
-				if (err)
-					res.send(err)
-				res.json(todos);
-			});
-		});
-	});
-	*/
+	//var MongoClient = require('mongodb').MongoClient;
+	//var dbUrl = 'mongodb://104.199.153.122:80/sunsignage_cms';
 	
-	// application -------------------------------------------------------------
-	app.get('/', function(req, res) {
-		res.sendfile('index.html'); // load the single view file (angular will handle the page changes on the front-end)
-	});
+	// MOONGO DB
+	mongoose.connect('mongodb://104.197.86.218:80/scms');
+	var UserScreen = require('./app/models/user-screen');
+	
+    //TO DO : mongoose 적용전 임시 사용
+    //var MongoClient = require('mongodb').MongoClient;
+    //var dbUrl = 'mongodb://104.197.86.218:80/scms';
 
+	// ROUTES FOR OUR API
+	// =============================================================================
+	var router = express.Router();              // get an instance of the express Router
+	
+	// middleware to use for all requests
+	router.use(function(req, res, next) {
+	    // do logging
+	    console.log('Something is happening.');
+	    next(); // make sure we go to the next routes and don't stop here
+	});
+	
+		
+	router.route('/')
+		.get(function(req, res) {
+			console.log('route index.html ---------');
+	        res.sendfile('index.html'); 
+		});
+
+
+    // more routes for our API will happen here
+	router.route('/user/screens')
+	    .post(function(req, res) {
+	        var userScreen = new UserScreen();
+	        userScreen.screen_id = req.query.screen_id;
+	        userScreen.email = req.query.email;
+	        userScreen.company_id = req.query.company_id;
+	
+	        // save the userScreen and check for errors
+	        userScreen.save(function(err) {
+	            if (err) res.send(err);
+	            res.json({ message: 'userScreen created!' });
+	        });
+			
+			console.log('/user/screens post----->');
+	        console.log('req.query----->', req.query);
+	        console.log('req.body.params----->', req.body.params);
+
+			/*
+	        MongoClient.connect(dbUrl, function(err, db) {
+			  	var col = db.collection('TN_CMS_USER_SCREEN');
+				col.insertOne({
+					screen_id: req.body.params.screen_id,
+					email: req.body.params.email,
+					company_id: req.body.params.company_id
+				}, function(err, result) {
+				  if(err) { res.send(err); }
+				  
+				  console.log('err------->', err);
+				  console.log('r.insertedCount------->', result);
+		   		  res.json(result.insertedCount);
+				  db.close();
+				});
+		      });
+		    */
+	    })
+	    .get(function(req, res) {
+	        UserScreen.find({
+	        	email: req.query.email 
+	        }, function(err, userScreens) {
+	            if (err) res.send(err);
+	            res.json(userScreens);
+	        });
+
+			/*
+	        MongoClient.connect(dbUrl, function(err, db) {
+				var col = db.collection('TN_CMS_USER_SCREEN');
+				col.find({
+				  	email: req.query.email
+				}).toArray(function(err, items) {
+				  	if(err) { res.send(err); }
+		   		  	res.json(items);
+				  	db.close();
+			    });
+		    });
+		    */
+	    })
+	    .delete(function(req, res) {
+	        UserScreen.remove({
+	            screen_id: req.params.screen_id
+	        }, function(err, userScreen) {
+	            if (err) res.send(err);
+	            res.json({ message: 'Successfully deleted' });
+	        });
+	    });
+
+	    /*
+	    .put(function(req, res) {
+	        UserScreen.findById(req.params.bear_id, function(err, userScreen) {
+	
+	            if (err)
+	                res.send(err);
+	
+	            userScreen.name = req.body.name;  // update the bears info
+	
+	            // save the bear
+	            userScreen.save(function(err) {
+	                if (err)
+	                    res.send(err);
+	
+	                res.json({ message: 'Bear updated!' });
+	            });
+	
+	        });
+	    });	
+	    */
+	    
+	/*
+	router.route('/bears/:bear_id')
+	
+	    // get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+	    .get(function(req, res) {
+	        Bear.findById(req.params.bear_id, function(err, bear) {
+	            if (err)
+	                res.send(err);
+	            res.json(bear);
+	        });
+	    });	    
+	*/
+
+	// REGISTER OUR ROUTES -------------------------------
+	// all of our routes will be prefixed with /api
+	app.use('/', router);
+	
 	// listen (start app with node server.js) ======================================
 	app.listen(8080);
 	console.log("App listening on port 8080");
+	
+

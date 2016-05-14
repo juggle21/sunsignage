@@ -1,0 +1,46 @@
+
+<div id="id01"></div>
+
+<script src="/js/jquery.js"></script>
+
+<script>
+
+$(document).ready(function(){
+    loadData();
+});
+      
+function loadData()
+{
+    var url = "http://land.naver.com/r/9895678";
+
+    var data ={};
+    data.q = 'test';
+    data.apikey = '947f96c9d2518613faae766eed75bca030ad67d7';
+    data.result = '10';
+    data.output = 'json';
+ 
+    $.ajaxPrefilter('json', function(options, orig, jqXHR) {
+        return 'jsonp';
+    });
+  
+    $.ajax({
+        url: "http://land.naver.com/r/9895678"
+        , crossDomain: true
+        , dataType: "json"
+        , type: 'GET'
+        //, data: data
+        , success: function( data, textStatus, jqXHR )
+        {
+            alert("sccess : " + data.channel.item.length );
+        }
+        , error: function( jqXHR, textStatus, errorThrown )
+        {
+            alert( textStatus + ", " + errorThrown );
+        }
+    });
+}
+</script>
+
+
+
+
